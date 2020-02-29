@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.props" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BB4F72A-5A6C-4D3A-B8B1-83CC0A653FCF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arrays_Stings\boolean_matrix_question.cs" />
+    <Compile Include="Arrays_Stings\build_lowest_no_by_removing_n_digits.cs" />
+    <Compile Include="Arrays_Stings\check_if_all_bits_in_no_are_Set.cs" />
+    <Compile Include="Arrays_Stings\check_if_given_four_points_form_a_square.cs" />
+    <Compile Include="Arrays_Stings\check_if_no_can_be_expressed_x_raise_powerof_y.cs" />
+    <Compile Include="Arrays_Stings\Count_all_possible_groups_of_size_2_or_3_that_have_sum_as_multiple_of_3.cs" />
+    <Compile Include="Arrays_Stings\Count_d _digit_positive_integers_with_0_as_a_digit.cs" />
+    <Compile Include="Arrays_Stings\count_distinct_elements_in_every_window_of_size_k.cs" />
+    <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
+    <Compile Include="Arrays_Stings\Count_number_of_occurrences_%28or_frequency%29_in_a_sorted_array.cs" />
+    <Compile Include="Arrays_Stings\count_occurences_of_anagrams.cs" />
+    <Compile Include="Arrays_Stings\Count_total_set_bits_in_all_numbers_from_1_to_n.cs" />
+    <Compile Include="Arrays_Stings\count_triplets_with_sum_smaller_than_given_value.cs" />
+    <Compile Include="Arrays_Stings\Element_that_appears_once_where_every_element_occurs_twice.cs" />
+    <Compile Include="Arrays_Stings\Equibilirium_index_of_an_Array.cs" />
+    <Compile Include="Arrays_Stings\fill_Arrays_using_1s_in_min_iterations.cs" />
+    <Compile Include="Arrays_Stings\find_4_elements_that_sum_to_given_array.cs" />
+    <Compile Include="Arrays_Stings\find_maximum_sum_subarray.cs" />
+    <Compile Include="Arrays_Stings\find_missing_no.cs" />
+    <Compile Include="Arrays_Stings\find_no_occouring_odd_no_of_times.cs" />
+    <Compile Include="Arrays_Stings\find_no_of_triangles.cs" />
+    <Compile Include="Arrays_Stings\Find_position_of_the_only_set_bit.cs" />
+    <Compile Include="Arrays_Stings\Find_the_nearest_smaller_numbers_on_left_side_in_an_array.cs" />
+    <Compile Include="Arrays_Stings\find_two_prime_nos_With_given_sum.cs" />
+    <Compile Include="Arrays_Stings\Kth_largest_smallest_element_using_Min_max_heap.cs" />
+    <Compile Include="Arrays_Stings\Kth_Non_Repeating_Character.cs" />
+    <Compile Include="Arrays_Stings\longest_substring_containing _1s.cs" />
+    <Compile Include="Arrays_Stings\Longest_Substring_Without_Repeating_Characters.cs" />
+    <Compile Include="Arrays_Stings\Maximum_Product_Subarray.cs" />
+    <Compile Include="Arrays_Stings\Next_greater_number_set_digits.cs" />
+    <Compile Include="Arrays_Stings\overlapping_rectangles.cs" />
+    <Compile Include="Arrays_Stings\pair_with_a_product_equal_to_x_in_array.cs" />
+    <Compile Include="Arrays_Stings\Parindrome_Numbers_Check.cs" />
+    <Compile Include="Arrays_Stings\position_of_right_most_set_bit.cs" />
+    <Compile Include="Arrays_Stings\print_all_possible_strings_that_can_be_made_by_placing_spaces.cs" />
+    <Compile Include="Arrays_Stings\print_matrix_in_spiral_form.cs" />
+    <Compile Include="Arrays_Stings\search_in_sorted_rorated_array.cs" />
+    <Compile Include="Arrays_Stings\take_input_and_replace_all_0s_with_5.cs" />
+    <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree\check_if_binary_tress_is_sum_tree.cs" />
+    <Compile Include="Tree\check_if_two_trees_are_mirror_tree.cs" />
+    <Compile Include="Tree\node.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.0.0\build\Microsoft.Build.Tasks.Git.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
