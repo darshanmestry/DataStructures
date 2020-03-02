@@ -9,21 +9,21 @@ namespace Test.Tree
 
     class check_if_binary_tress_is_sum_tree
     {
-        node root;
+        Node root;
 
         public check_if_binary_tress_is_sum_tree()
         {
-           root = new node(26);
-           root.left = new node(10);
-           root.right = new node(3);
-           root.left.left = new node(4);
-           root.left.right = new node(6);
-           root.right.right = new node(3);
+           root = new Node(26);
+           root.left = new Node(10);
+           root.right = new Node(3);
+           root.left.left = new Node(4);
+           root.left.right = new Node(6);
+           root.right.right = new Node(3);
 
 
             Console.WriteLine(is_sumTree(root));
         }
-        bool is_sumTree(node root)
+        bool is_sumTree(Node root)
         {
             if (root == null)
                 return true;
@@ -44,7 +44,7 @@ namespace Test.Tree
              return false; ;
         }
 
-        int util(node root)
+        int util(Node root)
         {
             if (root == null)
                 return 0;

@@ -8,27 +8,27 @@ namespace Test.Tree
 {
     class check_if_two_trees_are_mirror_tree
     {
-        node root1;
-        node root2;
+        Node root1;
+        Node root2;
         public check_if_two_trees_are_mirror_tree()
         {
-            root1= new node(1);
-            root2 = new node(1);
-            root1.left = new node(2);
-            root1.right = new node(3);
-            root1.left.left = new node(4);
-            root1.left.right = new node(5);
+            root1= new Node(1);
+            root2 = new Node(1);
+            root1.left = new Node(2);
+            root1.right = new Node(3);
+            root1.left.left = new Node(4);
+            root1.left.right = new Node(5);
 
-            root2.left = new node(3);
-            root2.right = new node(2);
-            root2.right.left = new node(5);
-            root2.right.right = new node(4);
+            root2.left = new Node(3);
+            root2.right = new Node(2);
+            root2.right.left = new Node(5);
+            root2.right.right = new Node(4);
 
             Console.WriteLine(isMirror(root1, root2));
 
         }
 
-        bool isMirror(node root1 ,node root2)
+        bool isMirror(Node root1 ,Node root2)
         {
             if (root1 == null || root2 == null)
                 return false;

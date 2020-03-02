@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Test.Tree
 {
-    public class node
+    public class Node
     {
         public int data;
-        public node left, right, nextRight;
+        public Node left, right, nextRight;
 
-        public node(int item)
+        public Node(int item)
         {
             data = item;
             left = right = nextRight = null;

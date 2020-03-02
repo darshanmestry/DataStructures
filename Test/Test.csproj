@@ -17,7 +17,7 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -70,11 +70,16 @@
     <Compile Include="Arrays_Stings\Find_position_of_the_only_set_bit.cs" />
     <Compile Include="Arrays_Stings\Find_the_nearest_smaller_numbers_on_left_side_in_an_array.cs" />
     <Compile Include="Arrays_Stings\find_two_prime_nos_With_given_sum.cs" />
-    <Compile Include="Arrays_Stings\Kth_largest_smallest_element_using_Min_max_heap.cs" />
+    <Compile Include="Arrays_Stings\find_uncommon_chars_of_two_strings.cs" />
+    <Compile Include="Arrays_Stings\generate_binary_from_1_to_n.cs" />
+    <Compile Include="Arrays_Stings\given_range_print_nos_having_unique_digits.cs" />
+    <Compile Include="Arrays_Stings\kth_largest_element_in_array.cs" />
     <Compile Include="Arrays_Stings\Kth_Non_Repeating_Character.cs" />
+    <Compile Include="Arrays_Stings\kth_smallest_element_in_array.cs" />
     <Compile Include="Arrays_Stings\longest_substring_containing _1s.cs" />
     <Compile Include="Arrays_Stings\Longest_Substring_Without_Repeating_Characters.cs" />
     <Compile Include="Arrays_Stings\Maximum_Product_Subarray.cs" />
+    <Compile Include="Arrays_Stings\max_sum_so_that_no_two_elements_are_adjancent.cs" />
     <Compile Include="Arrays_Stings\Next_greater_number_set_digits.cs" />
     <Compile Include="Arrays_Stings\overlapping_rectangles.cs" />
     <Compile Include="Arrays_Stings\pair_with_a_product_equal_to_x_in_array.cs" />
@@ -85,11 +90,15 @@
     <Compile Include="Arrays_Stings\search_in_sorted_rorated_array.cs" />
     <Compile Include="Arrays_Stings\take_input_and_replace_all_0s_with_5.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
+    <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\check_if_binary_tress_is_sum_tree.cs" />
     <Compile Include="Tree\check_if_two_trees_are_mirror_tree.cs" />
+    <Compile Include="Tree\level_order_traversal.cs" />
     <Compile Include="Tree\node.cs" />
+    <Compile Include="Tree\print_all_nodes_that_dont_have_sibiling.cs" />
+    <Compile Include="Tree\print_all_root_to_leaf_paths_of_binary_tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

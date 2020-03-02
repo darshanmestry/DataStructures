@@ -10,3 +10,9 @@ C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures co
 C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\Test\Test\bin\Debug\Test.exe.config
 C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\Test\Test\bin\Debug\Test.exe
 C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\Test\Test\bin\Debug\Test.pdb
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\obj\Debug\Test.exe
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\obj\Debug\Test.pdb
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\bin\Debug\Test.exe.config
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\bin\Debug\Test.exe
+C:\Users\dmestry\Syncplicity\Downloads\My Downloads\Documents\Data Structures codes\AIT\DataStructures\Test\bin\Debug\Test.pdb

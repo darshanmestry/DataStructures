@@ -11,30 +11,21 @@ namespace Test
 {
     class Program
     {
-        int findex;
-        int lindex;
+        
         static void Main(string[] args)
         {
-            find_two_prime_nos_With_given_sum obj = new find_two_prime_nos_With_given_sum();
 
 
-           
-            
-            Console.WriteLine();
+
+
+            print_all_nodes_that_dont_have_sibiling obj = new print_all_nodes_that_dont_have_sibiling();
+            Console.WriteLine("done");
             Console.ReadLine();
                 
         }
 
 
         
-
-        void totalsetBits(int[,] a,int r,int c)
-        {
-           
-
-
-        }
-
 
        
 
