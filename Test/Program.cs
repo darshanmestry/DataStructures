@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Test.Arrays_Stings;
 using Test.DynamicProgramming;
+using Test.LinkedList;
 using Test.Tree;
 
 namespace Test
@@ -18,7 +19,7 @@ namespace Test
 
 
 
-            print_all_nodes_that_dont_have_sibiling obj = new print_all_nodes_that_dont_have_sibiling();
+            height_of_a_tree obj = new height_of_a_tree();
             Console.WriteLine("done");
             Console.ReadLine();
                 
