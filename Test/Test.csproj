@@ -87,6 +87,10 @@
     <Compile Include="Arrays_Stings\pair_with_max_product_in_array.cs" />
     <Compile Include="Arrays_Stings\Parindrome_Numbers_Check.cs" />
     <Compile Include="Arrays_Stings\position_of_right_most_set_bit.cs" />
+    <Compile Include="Arrays_Stings\product_array_puzzle.cs" />
+    <Compile Include="Arrays_Stings\write_your_own_atoi.cs" />
+    <Compile Include="BackTracking\knight_tour_problem.cs" />
+    <Compile Include="BackTracking\print_all_permutations_of_string.cs" />
     <Compile Include="Arrays_Stings\print_all_possible_strings_that_can_be_made_by_placing_spaces.cs" />
     <Compile Include="Arrays_Stings\print_matrix_in_spiral_form.cs" />
     <Compile Include="Arrays_Stings\rearrange_posotive_and negative_nos_OofN_time_O1_extraspace.cs" />
@@ -98,6 +102,8 @@
     <Compile Include="Arrays_Stings\type_of_Array_and_its_max_element.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
+    <Compile Include="LinkedList\add_two_nos_in_a_linkedList.cs" />
+    <Compile Include="LinkedList\create_linked_list.cs" />
     <Compile Include="LinkedList\find_middle_element.cs" />
     <Compile Include="LinkedList\Node.cs" />
     <Compile Include="Program.cs" />

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Test.Arrays_Stings;
+using Test.BackTracking;
 using Test.DynamicProgramming;
 using Test.LinkedList;
 using Test.Tree;
@@ -16,10 +17,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-
-
-
-            height_of_a_tree obj = new height_of_a_tree();
+            knight_tour_problem obj = new knight_tour_problem();
             Console.WriteLine("done");
             Console.ReadLine();
                 

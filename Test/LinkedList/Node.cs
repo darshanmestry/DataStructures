@@ -8,14 +8,13 @@ namespace Test.LinkedList
 {
     class Node
     {
+      
         public int data;
         public Node next;
-        public Node(int d)
+        public Node(int d) //To create new node
         {
             data = d;
             next = null;
         }
-
-      
     }
 }
