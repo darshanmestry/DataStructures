@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using Test.Arrays_Stings;
 using Test.BackTracking;
 using Test.DynamicProgramming;
+using Test.Graph;
 using Test.LinkedList;
+using Test.Stack;
 using Test.Tree;
+
 
 namespace Test
 {
@@ -17,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            knight_tour_problem obj = new knight_tour_problem();
+            calculate_maximun_point_on_same_line obj = new calculate_maximun_point_on_same_line();
             Console.WriteLine("done");
             Console.ReadLine();
                 

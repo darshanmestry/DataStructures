@@ -48,9 +48,12 @@
   <ItemGroup>
     <Compile Include="Arrays_Stings\boolean_matrix_question.cs" />
     <Compile Include="Arrays_Stings\build_lowest_no_by_removing_n_digits.cs" />
+    <Compile Include="Arrays_Stings\calculate_maximun_point_on_same_line.cs" />
     <Compile Include="Arrays_Stings\check_if_all_bits_in_no_are_Set.cs" />
+    <Compile Include="Arrays_Stings\check_if_given_array_Conatins_duplicate_within_k_distance_From_Each_other.cs" />
     <Compile Include="Arrays_Stings\check_if_given_four_points_form_a_square.cs" />
     <Compile Include="Arrays_Stings\check_if_no_can_be_expressed_x_raise_powerof_y.cs" />
+    <Compile Include="Arrays_Stings\convert_array_in_zig_zag_fashion.cs" />
     <Compile Include="Arrays_Stings\Count_all_possible_groups_of_size_2_or_3_that_have_sum_as_multiple_of_3.cs" />
     <Compile Include="Arrays_Stings\Count_d _digit_positive_integers_with_0_as_a_digit.cs" />
     <Compile Include="Arrays_Stings\count_distinct_elements_in_every_window_of_size_k.cs" />
@@ -88,6 +91,7 @@
     <Compile Include="Arrays_Stings\Parindrome_Numbers_Check.cs" />
     <Compile Include="Arrays_Stings\position_of_right_most_set_bit.cs" />
     <Compile Include="Arrays_Stings\product_array_puzzle.cs" />
+    <Compile Include="Arrays_Stings\__sequence_of_moves_of_robot_is_circular_or_not.cs" />
     <Compile Include="Arrays_Stings\write_your_own_atoi.cs" />
     <Compile Include="BackTracking\knight_tour_problem.cs" />
     <Compile Include="BackTracking\print_all_permutations_of_string.cs" />
@@ -102,14 +106,21 @@
     <Compile Include="Arrays_Stings\type_of_Array_and_its_max_element.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
+    <Compile Include="Graph\BFS_on_graph.cs" />
+    <Compile Include="Graph\Graph.cs" />
     <Compile Include="LinkedList\add_two_nos_in_a_linkedList.cs" />
     <Compile Include="LinkedList\create_linked_list.cs" />
     <Compile Include="LinkedList\find_middle_element.cs" />
     <Compile Include="LinkedList\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stack\check_for_balanced_paranthesis.cs" />
+    <Compile Include="Tree\boundry_level_travsersal_of_binary_tree.cs" />
     <Compile Include="Tree\check_if_binary_tress_is_sum_tree.cs" />
     <Compile Include="Tree\check_if_two_trees_are_mirror_tree.cs" />
+    <Compile Include="Tree\convert_binary_tree_to_binary_search_tree.cs" />
+    <Compile Include="Tree\convert_tree_to_sum_tree.cs" />
+    <Compile Include="Tree\extract_leaves_of_binary_tree_in_DLL.cs" />
     <Compile Include="Tree\height_of_a_tree.cs" />
     <Compile Include="Tree\level_order_traversal.cs" />
     <Compile Include="Tree\node.cs" />
