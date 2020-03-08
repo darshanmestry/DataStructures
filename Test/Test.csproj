@@ -57,6 +57,9 @@
     <Compile Include="Arrays_Stings\Count_all_possible_groups_of_size_2_or_3_that_have_sum_as_multiple_of_3.cs" />
     <Compile Include="Arrays_Stings\Count_d _digit_positive_integers_with_0_as_a_digit.cs" />
     <Compile Include="Arrays_Stings\count_distinct_elements_in_every_window_of_size_k.cs" />
+    <Compile Include="Arrays_Stings\count_inversions_in_an_array.cs" />
+    <Compile Include="Arrays_Stings\count_no_with_same_first_and_last_digit.cs" />
+    <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_occurrences_%28or_frequency%29_in_a_sorted_array.cs" />
     <Compile Include="Arrays_Stings\count_occurences_of_anagrams.cs" />
@@ -104,12 +107,15 @@
     <Compile Include="Arrays_Stings\square_root_of_an_integer.cs" />
     <Compile Include="Arrays_Stings\take_input_and_replace_all_0s_with_5.cs" />
     <Compile Include="Arrays_Stings\type_of_Array_and_its_max_element.cs" />
+    <Compile Include="DynamicProgramming\count_ways_to_reach_nth_stair.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
     <Compile Include="Graph\BFS_on_graph.cs" />
+    <Compile Include="Graph\DFS_on_graph.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="LinkedList\add_two_nos_in_a_linkedList.cs" />
     <Compile Include="LinkedList\create_linked_list.cs" />
+    <Compile Include="LinkedList\delete_n_nodes_after_m_nodes.cs" />
     <Compile Include="LinkedList\find_middle_element.cs" />
     <Compile Include="LinkedList\Node.cs" />
     <Compile Include="Program.cs" />
@@ -120,6 +126,8 @@
     <Compile Include="Tree\check_if_two_trees_are_mirror_tree.cs" />
     <Compile Include="Tree\convert_binary_tree_to_binary_search_tree.cs" />
     <Compile Include="Tree\convert_tree_to_sum_tree.cs" />
+    <Compile Include="Tree\diameter_of_binary_tree.cs" />
+    <Compile Include="Tree\difference_between_sum_of_odd_level_and_even_level_nodes_of_btree.cs" />
     <Compile Include="Tree\extract_leaves_of_binary_tree_in_DLL.cs" />
     <Compile Include="Tree\height_of_a_tree.cs" />
     <Compile Include="Tree\level_order_traversal.cs" />

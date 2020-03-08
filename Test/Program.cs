@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            calculate_maximun_point_on_same_line obj = new calculate_maximun_point_on_same_line();
+            difference_between_sum_of_odd_level_and_even_level_nodes_of_btree obj = new difference_between_sum_of_odd_level_and_even_level_nodes_of_btree();
             Console.WriteLine("done");
             Console.ReadLine();
                 
