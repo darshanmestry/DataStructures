@@ -59,6 +59,7 @@
     <Compile Include="Arrays_Stings\count_distinct_elements_in_every_window_of_size_k.cs" />
     <Compile Include="Arrays_Stings\count_inversions_in_an_array.cs" />
     <Compile Include="Arrays_Stings\count_no_with_same_first_and_last_digit.cs" />
+    <Compile Include="DynamicProgramming\0-1Knapsck_problem.cs" />
     <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_occurrences_%28or_frequency%29_in_a_sorted_array.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Arrays_Stings\type_of_Array_and_its_max_element.cs" />
     <Compile Include="DynamicProgramming\count_ways_to_reach_nth_stair.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
+    <Compile Include="DynamicProgramming\longest_palindromic_subsequence.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
     <Compile Include="Graph\BFS_on_graph.cs" />
     <Compile Include="Graph\DFS_on_graph.cs" />

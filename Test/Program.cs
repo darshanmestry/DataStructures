@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            difference_between_sum_of_odd_level_and_even_level_nodes_of_btree obj = new difference_between_sum_of_odd_level_and_even_level_nodes_of_btree();
+            longest_palindromic_subsequence obj = new longest_palindromic_subsequence();
             Console.WriteLine("done");
             Console.ReadLine();
                 
