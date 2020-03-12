@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            longest_palindromic_subsequence obj = new longest_palindromic_subsequence();
+            find_peak_element obj = new find_peak_element();
             Console.WriteLine("done");
             Console.ReadLine();
                 

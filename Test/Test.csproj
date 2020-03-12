@@ -59,6 +59,9 @@
     <Compile Include="Arrays_Stings\count_distinct_elements_in_every_window_of_size_k.cs" />
     <Compile Include="Arrays_Stings\count_inversions_in_an_array.cs" />
     <Compile Include="Arrays_Stings\count_no_with_same_first_and_last_digit.cs" />
+    <Compile Include="Arrays_Stings\extract_max_numeric_value_from_string.cs" />
+    <Compile Include="Arrays_Stings\find_peak_element.cs" />
+    <Compile Include="Arrays_Stings\for_each_element_in_1st_array_count_elements_less_than_or_equal_to_it_in_2nd_array.cs" />
     <Compile Include="DynamicProgramming\0-1Knapsck_problem.cs" />
     <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="DynamicProgramming\count_ways_to_reach_nth_stair.cs" />
     <Compile Include="DynamicProgramming\dice_throw_problem.cs" />
     <Compile Include="DynamicProgramming\longest_palindromic_subsequence.cs" />
+    <Compile Include="DynamicProgramming\maximum_increasing_subsequence.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
     <Compile Include="Graph\BFS_on_graph.cs" />
     <Compile Include="Graph\DFS_on_graph.cs" />
@@ -130,6 +134,7 @@
     <Compile Include="Tree\convert_tree_to_sum_tree.cs" />
     <Compile Include="Tree\diameter_of_binary_tree.cs" />
     <Compile Include="Tree\difference_between_sum_of_odd_level_and_even_level_nodes_of_btree.cs" />
+    <Compile Include="Tree\Evaluation_exp_of_tree.cs" />
     <Compile Include="Tree\extract_leaves_of_binary_tree_in_DLL.cs" />
     <Compile Include="Tree\height_of_a_tree.cs" />
     <Compile Include="Tree\level_order_traversal.cs" />
