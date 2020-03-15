@@ -60,9 +60,26 @@
     <Compile Include="Arrays_Stings\count_inversions_in_an_array.cs" />
     <Compile Include="Arrays_Stings\count_no_with_same_first_and_last_digit.cs" />
     <Compile Include="Arrays_Stings\extract_max_numeric_value_from_string.cs" />
+    <Compile Include="Arrays_Stings\find_all_strings_that_match_specific_pattern_in_dict.cs" />
+    <Compile Include="Arrays_Stings\find_element_before_which_all_elements_are_smaller_and_after_that_all_elemenets_Are_greater.cs" />
+    <Compile Include="Arrays_Stings\find_element_that_appears_only_once.cs" />
+    <Compile Include="Arrays_Stings\find_equal_point_in_string_of_brackets.cs" />
+    <Compile Include="Arrays_Stings\find_excel_column_name_from_given_no.cs" />
+    <Compile Include="Arrays_Stings\find_extra_element_present_in_one_sorted_array.cs" />
+    <Compile Include="Arrays_Stings\find_four_elements_in_a_b_c_d_such_that_a=b_and_c=d.cs" />
+    <Compile Include="Arrays_Stings\find_largest_sum_array_with_sum_0.cs" />
+    <Compile Include="Arrays_Stings\find_max_in_array_which_is_increasing_and_then_decreasing.cs" />
+    <Compile Include="Arrays_Stings\find_min_in_sorted_rotated_array.cs" />
+    <Compile Include="Arrays_Stings\find_next_greater_no_in_same_set_of_digits.cs" />
+    <Compile Include="Arrays_Stings\find_nth_magic_no.cs" />
     <Compile Include="Arrays_Stings\find_peak_element.cs" />
+    <Compile Include="Arrays_Stings\find_pythgorous_triplet.cs" />
+    <Compile Include="Arrays_Stings\find_sorted_subsequence_of_size_3_in_linear_Time.cs" />
+    <Compile Include="Arrays_Stings\find_sub_array_with_given_sum.cs" />
     <Compile Include="Arrays_Stings\for_each_element_in_1st_array_count_elements_less_than_or_equal_to_it_in_2nd_array.cs" />
+    <Compile Include="Arrays_Stings\max_product_triplet_subsequnce_of_size_3.cs" />
     <Compile Include="DynamicProgramming\0-1Knapsck_problem.cs" />
+    <Compile Include="DynamicProgramming\coin_change.cs" />
     <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_occurrences_%28or_frequency%29_in_a_sorted_array.cs" />
@@ -116,6 +133,7 @@
     <Compile Include="DynamicProgramming\longest_palindromic_subsequence.cs" />
     <Compile Include="DynamicProgramming\maximum_increasing_subsequence.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
+    <Compile Include="DynamicProgramming\palindrome_partitioning.cs" />
     <Compile Include="Graph\BFS_on_graph.cs" />
     <Compile Include="Graph\DFS_on_graph.cs" />
     <Compile Include="Graph\Graph.cs" />
@@ -136,6 +154,8 @@
     <Compile Include="Tree\difference_between_sum_of_odd_level_and_even_level_nodes_of_btree.cs" />
     <Compile Include="Tree\Evaluation_exp_of_tree.cs" />
     <Compile Include="Tree\extract_leaves_of_binary_tree_in_DLL.cs" />
+    <Compile Include="Tree\find_height_of_btree_whose_leaf_nodes_are_connected_as_doubly_circular_linked_list.cs" />
+    <Compile Include="Tree\find_max_sum_level_binary_tree.cs" />
     <Compile Include="Tree\height_of_a_tree.cs" />
     <Compile Include="Tree\level_order_traversal.cs" />
     <Compile Include="Tree\node.cs" />

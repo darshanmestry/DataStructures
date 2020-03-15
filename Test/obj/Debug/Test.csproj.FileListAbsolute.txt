@@ -28,3 +28,9 @@ C:\Users\dmestry\Documents\My Projects\Github\DataStructures\Test\bin\Debug\Test
 C:\Users\dmestry\Documents\My Projects\Github\DataStructures\Test\obj\Debug\Test.csprojAssemblyReference.cache
 C:\Users\dmestry\Documents\My Projects\Github\DataStructures\Test\obj\Debug\Test.exe
 C:\Users\dmestry\Documents\My Projects\Github\DataStructures\Test\obj\Debug\Test.pdb
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\bin\Debug\Test.exe.config
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\bin\Debug\Test.exe
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\bin\Debug\Test.pdb
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\obj\Debug\Test.exe
+C:\Users\dmestry\Documents\My Projects\Github\test\Test\obj\Debug\Test.pdb

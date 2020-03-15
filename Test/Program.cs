@@ -20,7 +20,8 @@ namespace Test
         static void Main(string[] args)
         {
 
-            find_peak_element obj = new find_peak_element();
+            find_max_in_array_which_is_increasing_and_then_decreasing obj = new find_max_in_array_which_is_increasing_and_then_decreasing();
+
             Console.WriteLine("done");
             Console.ReadLine();
                 
