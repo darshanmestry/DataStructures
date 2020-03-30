@@ -8,12 +8,48 @@ namespace Test.Arrays_Stings
 {
     class max_sum_so_that_no_two_elements_are_adjancent
     {
+        /*
+         * Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence should be adjacent in the array. So 3 2 7 10 should return 13 (sum of 3 and 10) or 3 2 5 10 7 should return 15 (sum of 3, 5 and 7).Answer the question in most efficient way.
+
+            Examples :
+
+            Input : arr[] = {5, 5, 10, 100, 10, 5}
+            Output : 110
+
+            Input : arr[] = {1, 2, 3}
+            Output : 4
+
+            Input : arr[] = {1, 20, 3}
+            Output : 20
+
+
+         */
         public max_sum_so_that_no_two_elements_are_adjancent()
         {
             int[] arr = new int[]{5, 5, 10,
                               100, 10, 5};
 
-            maxSum(arr);
+            //maxSum(arr);
+            max_sum_practise(arr);
+        }
+
+        void max_sum_practise(int[] arr)
+        {
+            int i_minus_2 = 0;
+            int cur = arr[0];
+
+            int i_minus_2_at_index_i;
+            for(int i=1;i<arr.Length;i++)
+            {
+                i_minus_2_at_index_i = Math.Max(cur, i_minus_2); // till i-1 or i-2 
+                cur = arr[i] + i_minus_2; // at i will be i+(i-2)
+
+                i_minus_2 = i_minus_2_at_index_i;  //now (i-2)= will be either i-1 or i-2
+            }
+
+            int res = Math.Max(cur, i_minus_2);
+
+
         }
 
         void maxSum(int[] arr)

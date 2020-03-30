@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            find_max_in_array_which_is_increasing_and_then_decreasing obj = new find_max_in_array_which_is_increasing_and_then_decreasing();
+            median_of_two_sorted_arrays_of_same_size obj = new median_of_two_sorted_arrays_of_same_size();
 
             Console.WriteLine("done");
             Console.ReadLine();
