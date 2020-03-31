@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            median_of_two_sorted_arrays_of_same_size obj = new median_of_two_sorted_arrays_of_same_size();
+            move_all_zeros_at_the_end_of_array obj = new move_all_zeros_at_the_end_of_array();
 
             Console.WriteLine("done");
             Console.ReadLine();
