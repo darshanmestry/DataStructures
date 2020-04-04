@@ -20,7 +20,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            move_all_zeros_at_the_end_of_array obj = new move_all_zeros_at_the_end_of_array();
+            seperate_even_and_odd_nodes_in_linked_list obj = new seperate_even_and_odd_nodes_in_linked_list();
 
             Console.WriteLine("done");
             Console.ReadLine();

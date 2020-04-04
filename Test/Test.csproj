@@ -90,6 +90,8 @@
     <Compile Include="Arrays_Stings\generate_n_bit_gray_code.cs" />
     <Compile Include="Arrays_Stings\given_binary_string_count_no_of_substrings_starting_and_ending_with_one.cs" />
     <Compile Include="Arrays_Stings\higest_power_of_2_less_than_or_equal_to_number.cs" />
+    <Compile Include="Arrays_Stings\jumping_nos.cs" />
+    <Compile Include="Arrays_Stings\kth_element_of_matrix_in_spiral_form.cs" />
     <Compile Include="Arrays_Stings\largest_subarray_with_equal_no_of_0s_and_1s.cs" />
     <Compile Include="Arrays_Stings\length_of_longest_substring_without_repeating_chars.cs" />
     <Compile Include="Arrays_Stings\look_and_say_sequence.cs" />
@@ -103,6 +105,14 @@
     <Compile Include="Arrays_Stings\min_sum_of_squares_of_char_count_after_removing_k_chars.cs" />
     <Compile Include="Arrays_Stings\min_time_to_rot_all_oranges.cs" />
     <Compile Include="Arrays_Stings\move_all_zeros_at_the_end_of_array.cs" />
+    <Compile Include="Arrays_Stings\next_greater_element_in_array.cs" />
+    <Compile Include="Arrays_Stings\no_of_groups_of_size_2_or_3_divisible_by_3.cs" />
+    <Compile Include="Arrays_Stings\number_of_buildings_facing_sun.cs" />
+    <Compile Include="Arrays_Stings\queue_using_stacks.cs" />
+    <Compile Include="Arrays_Stings\rearrange_char_string_such_tht_no_2_samechars_are_adjacent.cs" />
+    <Compile Include="Arrays_Stings\replace_every_element_with_greatest_element_on_right_side.cs" />
+    <Compile Include="Arrays_Stings\reverse_words_in_given_string.cs" />
+    <Compile Include="Arrays_Stings\unique_rows_in_boolean_matrix.cs" />
     <Compile Include="DynamicProgramming\0-1Knapsck_problem.cs" />
     <Compile Include="DynamicProgramming\coin_change.cs" />
     <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
@@ -165,11 +175,18 @@
     <Compile Include="LinkedList\add_two_nos_in_a_linkedList.cs" />
     <Compile Include="LinkedList\check_if_linkedlist_is_palindrome.cs" />
     <Compile Include="LinkedList\create_linked_list.cs" />
+    <Compile Include="LinkedList\delete_every_k_node_linkedlist.cs" />
     <Compile Include="LinkedList\delete_n_nodes_after_m_nodes.cs" />
     <Compile Include="LinkedList\intersection_of_2_linkedlists.cs" />
     <Compile Include="LinkedList\merge_2_sorted_lineked_list_and_return_new.cs" />
     <Compile Include="LinkedList\modify_contents_of_linked_list.cs" />
+    <Compile Include="LinkedList\multiply_2_nos_represented_by_linkedlist.cs" />
+    <Compile Include="LinkedList\nth_node_from_end_of_linked_list.cs" />
+    <Compile Include="LinkedList\pairwise_swap_elements_of_linked_list.cs" />
+    <Compile Include="LinkedList\rearrange_linkedlist_with_even_and_odd_position_nodes_together.cs" />
+    <Compile Include="LinkedList\seperate_even_and_odd_nodes_in_linked_list.cs" />
     <Compile Include="LinkedList\sort_a_linkedlist_that_is_sorted_alternating_asc_and_dsc_order.cs" />
+    <Compile Include="Tree\common_nodes_in_2_bst.cs" />
     <Compile Include="Tree\determine_if_tree_is_height_balanced.cs" />
     <Compile Include="LinkedList\find_middle_element.cs" />
     <Compile Include="LinkedList\given_only_pointer_for_node_tobe_deleted_delete_the_node.cs" />
@@ -189,13 +206,20 @@
     <Compile Include="Tree\find_height_of_btree_whose_leaf_nodes_are_connected_as_doubly_circular_linked_list.cs" />
     <Compile Include="Tree\find_max_sum_level_binary_tree.cs" />
     <Compile Include="Tree\height_of_a_tree.cs" />
+    <Compile Include="Tree\leftview_of_binary_tree.cs" />
     <Compile Include="Tree\level_order_traversal.cs" />
     <Compile Include="Tree\level_order_traversal_spiral_form.cs" />
     <Compile Include="Tree\longest_consecutive_sequence_in_binary_tree.cs" />
     <Compile Include="Tree\lowest_common_ancestor_binary_tree.cs" />
     <Compile Include="Tree\node.cs" />
+    <Compile Include="Tree\nodes_at_k_distance_from_root.cs" />
+    <Compile Include="Tree\nodes_in_binary_tree_having_k_leaves.cs" />
     <Compile Include="Tree\print_all_nodes_that_dont_have_sibiling.cs" />
     <Compile Include="Tree\print_all_root_to_leaf_paths_of_binary_tree.cs" />
+    <Compile Include="Tree\print_binary_tree_in_vertical_order.cs" />
+    <Compile Include="Tree\reverse_level_order_traversal.cs" />
+    <Compile Include="Tree\right_view_of_binary_tree.cs" />
+    <Compile Include="Tree\root_to_leaft_path_with_given_sum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
