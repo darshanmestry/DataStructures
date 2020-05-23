@@ -8,8 +8,9 @@ namespace Test.Tree
 {
     public class Node
     {
-        public int data;
-        public Node left, right, nextRight;
+        public int data,hd;
+        
+        public Node left, right, nextRight,random;
 
         public Node(int item)
         {

@@ -7,6 +7,8 @@ using Test.Arrays_Stings;
 using Test.BackTracking;
 using Test.DynamicProgramming;
 using Test.Graph;
+using Test.Greedy;
+using Test.Heap;
 using Test.LinkedList;
 using Test.Stack;
 using Test.Tree;
@@ -20,7 +22,7 @@ namespace Test
         static void Main(string[] args)
         {
 
-            seperate_even_and_odd_nodes_in_linked_list obj = new seperate_even_and_odd_nodes_in_linked_list();
+            max_size_rectangle_in_binary_sub_matrix obj = new max_size_rectangle_in_binary_sub_matrix();
 
             Console.WriteLine("done");
             Console.ReadLine();
