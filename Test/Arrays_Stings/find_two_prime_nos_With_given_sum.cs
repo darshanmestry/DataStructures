@@ -14,14 +14,14 @@ namespace Test.Arrays_Stings
             int n = 74;
 
             
-            isPrime = new bool[n];
+            isPrime = new bool[n+1];
             twoPrimeWithSums(n);
            
         }
 
         void allPrimeNosUpToN(int n)
         {
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
                 isPrime[i] = true;
 
             for (int i = 2; i < n; i++)
@@ -36,11 +36,29 @@ namespace Test.Arrays_Stings
             }
         }
 
+
+        void seiveOfErathosenes(int n)
+        {
+
+
+            for (int i = 0; i <= n; i++)
+                isPrime[i] = true;
+
+            for(int p=2;p*p<=n;p++)
+            {
+                if(isPrime[p])
+                {
+                    for (int i = p * p; i <=n; i = i + p)
+                        isPrime[i] = false;
+                }
+            }
+
+        }
         void twoPrimeWithSums(int sum)
         {
-            allPrimeNosUpToN(sum);
-            
-            for(int i=0;i<sum;i++)
+            //allPrimeNosUpToN(sum);
+            seiveOfErathosenes(sum);
+            for (int i=0;i<sum;i++)
             {
                 if(isPrime[i] && isPrime[sum-i])
                 {

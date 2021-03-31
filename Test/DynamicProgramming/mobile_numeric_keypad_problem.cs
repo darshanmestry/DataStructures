@@ -38,7 +38,14 @@ namespace Test.DynamicProgramming
                               {'7', '8', '9'},
                               {'*', '0', '#'}};
 
-            no_of_possible_numbers(keypad, 3);
+            int[,] keypadNumeric={{1, 2, 3},
+                           {4, 5, 6},
+                           {7, 8, 9},
+                           {-1, 0, -1}};
+
+            //no_of_possible_numbers(keypad, 2);
+
+            int res=practise(keypadNumeric, 2);
         }
 
         void no_of_possible_numbers(char[,] keypad,int n)
@@ -58,6 +65,7 @@ namespace Test.DynamicProgramming
                 count[i, 1] = 1;
             }
 
+            printMatrix(count);
             int[] rmoves = { 0,-1,1,0,0};
             int[] cmoves = { 0,0,0,1,-1};
              
@@ -87,6 +95,7 @@ namespace Test.DynamicProgramming
                 }
             }
 
+            printMatrix(count);
             int totalcount = 0;
             for(int i=0;i<10;i++)
             {
@@ -96,6 +105,17 @@ namespace Test.DynamicProgramming
             Console.WriteLine(totalcount);
         }
 
+        void printMatrix(int[,] arr)
+        {
+            for(int i=0;i<arr.GetLength(0);i++)
+            {
+                for(int j=0;j<arr.GetLength(1);j++)
+                {
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+        }
         bool isSafe(int row, int col, char[,] keypad)
         {
             if (row > 0 && row < 4 && col > 0 && col < 3 && keypad[row, col] != '*' && keypad[row, col] != '#')
@@ -103,5 +123,72 @@ namespace Test.DynamicProgramming
 
             return false;
         }
+   
+       
+
+        int practise(int[,] arr,int n)
+        {
+
+            if (n <= 0)
+                return 0;
+
+            if (n == 1)
+                return 10;
+
+            int[,] dp = new int[10, n + 1]; //10 is because nos can be 0-9 and n+1 to store possibilities
+
+
+            //initialise 0th col and 1st col in dp array as 0 and 1 respectively
+
+            for(int i=0;i<10;i++)
+            {
+                dp[i, 0] = 0;
+                dp[i, 1] = 1;
+            }
+
+
+            int[] rmoves = { 0, 0, 0, 1, -1 };
+            int[] cmoves = { 0, -1, 1, 0, 0 };
+            
+
+
+            for(int k=2;k<=n;k++) //iterate n no of times
+            {
+                //iterate input array which is of size 4 x 3
+                for(int i=0;i<4;i++)
+                {
+                    for(int j=0;j<3;j++)
+                    {
+                        if(arr[i,j]!=-1)
+                        {
+                            int num = arr[i, j];
+                            dp[num, k] = 0;
+
+                            for(int moves=0;moves<5;moves++)
+                            {
+                                int rnew = i + rmoves[moves];
+                                int cnew = j + cmoves[moves];
+
+                                if(rnew>=0 && rnew <4 && cnew>=0 &&cnew<3 && arr[rnew,cnew]!=-1)
+                                {
+                                    int newNum = arr[rnew, cnew];
+                                    dp[num,k] += dp[newNum, k - 1]; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            int res = 0;
+
+            for (int i = 0; i < 10; i++)
+                res += dp[i, n];
+
+
+            return res;
+
+        }
+    
     }
 }

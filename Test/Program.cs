@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,8 @@ namespace Test
         static void Main(string[] args)
         {
 
-            max_size_rectangle_in_binary_sub_matrix obj = new max_size_rectangle_in_binary_sub_matrix();
+
+            remove_chars_from_first_string_which_are_present_in_second_string obj = new remove_chars_from_first_string_which_are_present_in_second_string();
 
             Console.WriteLine("done");
             Console.ReadLine();

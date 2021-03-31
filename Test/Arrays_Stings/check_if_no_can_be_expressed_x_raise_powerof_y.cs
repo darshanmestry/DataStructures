@@ -12,18 +12,32 @@ namespace Test.Arrays_Stings
         // 49 is 7^2  , 9 is 3^3
         public check_if_no_can_be_expressed_x_raise_powerof_y()
         {
-
+            bool res = isTrue(8);
+            bool res1 = isTrue(10);
         }
 
-        void isTrue(int x)
+        bool isTrue(int x)
         {
-            int p = 1; ;
-
-            for(int i=1;i<=Math.Sqrt(x);i++)
+            
+            for(int i=2;i<=Math.Sqrt(x);i++)
             {
-                p = p * i;
+                int y = 2;
+
+
+                double p = Math.Pow(Double.Parse(i.ToString()),Double.Parse( y.ToString()));
+
+                while(p<=x)
+                {
+                    y++;
+
+                    if (p == x)
+                        return true;
+
+                    p= Math.Pow(Double.Parse(i.ToString()), Double.Parse(y.ToString()));
+                }
 
             }
+            return false;
         }
 
     }

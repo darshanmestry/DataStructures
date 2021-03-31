@@ -8,13 +8,16 @@ namespace Test.Arrays_Stings
 {
     class kth_largest_element_in_array
     {
-       
+        /*
+         * 
+         * Time complexity : O(klogn)
+         */
 
         public kth_largest_element_in_array()
         {
             int[] arr = { 5, 6, 7, 1, 2 };
-            int l = 2;
-            kthLargest(arr, 2);
+            int l = 3;
+            kthLargest(arr, 3);
         }
 
         void kthLargest(int[] arr,int k)
@@ -59,7 +62,6 @@ namespace Test.Arrays_Stings
                 arr[i] = temp;
 
                 minHeapify(minIndex,arr, size);
-
             }
         }
     }

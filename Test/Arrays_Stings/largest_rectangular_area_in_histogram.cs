@@ -10,8 +10,10 @@ namespace Test.Arrays_Stings
     {
         public largest_rectangular_area_in_histogram()
         {
-            int[] hist = new int[] { 6, 2, 5, 4, 5, 1, 6 };
+            //int[] hist = new int[] { 6, 2, 5, 4, 5, 1, 6 };
             //ans is 12
+
+            int[] hist = new int[] { 1,2,2,1};
 
             largest_rect_Area(hist);
         }

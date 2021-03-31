@@ -12,8 +12,44 @@ namespace Test.Arrays_Stings
         {
             int[] arr={-1, 2, -3, 4,5, 6, -7, 8, 9};
             //For example, if the input array is [-1, 2, -3, 4, 5, 6, -7, 8, 9], then the output should be [9, -7, 8, -3, 5, -1, 2, 4, 6]
-            rearrange(arr);
+            //rearrange(arr);
+            rearrange_Practise(arr);
         }
+
+
+        void rearrange_Practise(int[] arr)
+        {
+            int index = 0;
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                if(arr[i]<0)
+                {
+                    int temp = arr[index];
+                    arr[index] = arr[i];
+                    arr[i] = temp;
+                    index++;
+                }
+            }
+
+            int posIndex = index, negIndex = 0;
+
+            while(posIndex<arr.Length )
+            {
+                if (arr[negIndex] < 0)
+                {
+                    int temp = arr[negIndex];
+                    arr[negIndex] = arr[posIndex];
+                    arr[posIndex] = temp;
+                   
+                }
+                posIndex += 2;
+                negIndex += 2;
+
+            }
+        }
+
+      
 
         void  rearrange(int[] arr)
         {

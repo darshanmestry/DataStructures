@@ -52,6 +52,27 @@ namespace Test.Arrays_Stings
 
         }
 
+        void max_sumPractise(int[] arr)
+        {
+            if (arr.Length == 1)
+                return;
+
+
+            int incl = arr[0];
+            int excl = 0;
+
+            for(int i=1;i<arr.Length;i++)
+            {
+                incl = excl + arr[i];
+
+                excl = Math.Max(incl, excl);
+            }
+
+            int res = Math.Max(incl, excl);
+
+
+        }
+
         void maxSum(int[] arr)
         {
 

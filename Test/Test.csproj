@@ -145,6 +145,7 @@
     <Compile Include="BackTracking\sudoku.cs" />
     <Compile Include="DynamicProgramming\0-1Knapsck_problem.cs" />
     <Compile Include="DynamicProgramming\coin_change.cs" />
+    <Compile Include="DynamicProgramming\count_all_possible_paths_from_topleft_to_bottomrigght_of_a_matrix.cs" />
     <Compile Include="DynamicProgramming\count_no_of_Ways_to_cover_distance.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_bits_to_be_flipped_to_convert_A_to_B.cs" />
     <Compile Include="Arrays_Stings\Count_number_of_occurrences_%28or_frequency%29_in_a_sorted_array.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="DynamicProgramming\longest_palindromic_subsequence.cs" />
     <Compile Include="DynamicProgramming\maximum_increasing_subsequence.cs" />
     <Compile Include="DynamicProgramming\max_len_of_chain_of_pairs.cs" />
+    <Compile Include="DynamicProgramming\max_size_rectangle_in_binary_sub_matrix.cs" />
     <Compile Include="DynamicProgramming\mobile_numeric_keypad_problem.cs" />
     <Compile Include="DynamicProgramming\palindrome_partitioning.cs" />
     <Compile Include="DynamicProgramming\print_max_no_of_A_using_crtlA_crtlV_crtlC.cs" />

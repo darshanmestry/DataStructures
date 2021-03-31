@@ -21,8 +21,12 @@ namespace Test.Arrays_Stings
                 1 1 1 1
                 1 1 0 0
                 Output :
+
+            Answer is 8
                 1 1 1 1
                 1 1 1 1
+
+            
                 Explanation : 
                 The largest rectangle with only 1's is from 
                 (1, 0) to (2, 3) which is
@@ -46,8 +50,7 @@ namespace Test.Arrays_Stings
             int max_size = int.MinValue;
 
             int size = 0;
-            for (int i = 0; i < arr.GetLength(1); i++)
-                size += arr[0, i];
+            size = max_histogram(arr, 0);
 
             max_size = Math.Max(max_size, size);
 
@@ -61,10 +64,43 @@ namespace Test.Arrays_Stings
                    
                     size += arr[i, j];
                 }
-                max_size = Math.Max(max_size, size);
+                int hist = max_histogram(arr, i);
+
+                max_size = Math.Max(hist, max_size);
             }
         }
 
         
+        int max_histogram(int[,] arr,int row)
+        {
+
+            Stack<int> st = new Stack<int>();
+            int maxares = int.MinValue;
+            int j = 0;
+            while( j<arr.GetLength(1))
+            {
+                if(st.Count==0 || arr[row,j]>=arr[row,st.Peek()])
+                {
+                    st.Push(j++);
+                    
+                }
+                else 
+                {
+                    int index = st.Pop();
+
+                    int area = arr[row, index] * (st.Count() == 0 ? j : j - st.Peek() - 1);
+                    maxares = Math.Max(area, maxares);
+                }
+            }
+
+            while(st.Count>0)
+            {
+                    int index = st.Pop();
+                    int area = arr[row, index] * (st.Count() == 0 ? j : j - st.Peek() - 1);
+                    maxares = Math.Max(area, maxares);
+            }
+
+            return maxares;
+        }
     }
 }
