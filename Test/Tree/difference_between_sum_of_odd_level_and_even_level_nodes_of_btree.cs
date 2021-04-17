@@ -66,5 +66,48 @@ namespace Test.Tree
 
             Console.WriteLine("ODD sum - EVEN sum =" + (oddSum - evenSum));
         }
+   
+    
+       void Practise(Node root)
+        {
+            Queue<Node> q = new Queue<Node>();
+
+            q.Enqueue(root);
+
+            int level = 0;
+
+            int oddsum = 0;
+            int evensum = 0;
+
+            while(q.Count>0)
+            {
+                int size = q.Count;
+
+                level++;
+
+                while(size>0)
+                {
+
+                    Node temp = q.Dequeue();
+
+                    if (level % 2 == 0)
+                        evensum += temp.data;
+                    else
+                        oddsum += temp.data;
+
+
+                    if (temp.left != null)
+                        q.Enqueue(temp.left);
+
+
+                    if (temp.right != null)
+                        q.Enqueue(temp.right);
+
+                    size--;
+         
+                }
+            }
+
+        }
     }
 }

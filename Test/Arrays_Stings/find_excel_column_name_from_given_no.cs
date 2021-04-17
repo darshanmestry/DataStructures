@@ -28,6 +28,7 @@ namespace Test.Arrays_Stings
 
             char n = (char)(a + 'A');
 
+            findExcelColName(2);
             findExcelColName(26);
             findExcelColName(51);
             findExcelColName(52);
@@ -52,7 +53,8 @@ namespace Test.Arrays_Stings
                 }
                 else
                 {
-                    str += ((char)((rem-1) + 'A')).ToString(); // need to do -1 as index is from 0 to 25 
+                    // adding 'A' to rem will return the actual aplhabet. E.g. rem=2 then (rem-1)+'A' will give B
+                    str += ((char)((rem-1) + 'A')).ToString(); // need to do -1 as index is from 0 to 25  
                     n = n / 26;
                 }
                 

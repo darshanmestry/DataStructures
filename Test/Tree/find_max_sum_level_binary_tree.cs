@@ -53,7 +53,8 @@ namespace Test.Tree
                          max sum is 17  
              */
 
-            findMaxsumlevel(root);
+            //findMaxsumlevel(root);
+            Practise(root);
         }
 
         void findMaxsumlevel(Node root)
@@ -89,6 +90,48 @@ namespace Test.Tree
 
             Console.WriteLine(max);
 
+        }
+    
+        void Practise(Node root)
+        {
+          
+
+            Queue<Node> q = new Queue<Node>();
+            int maxsum =root.data;
+
+            q.Enqueue(root);
+            int level = 0;
+
+            while(q.Count>0)
+            {
+                int size = q.Count;
+                int level_Data = 0;
+
+                level++; //for understanding purpose
+                Console.WriteLine("Level " + level); //for debug
+                while (size>0)
+                {
+
+                   
+                    Node temp = q.Peek();
+                    q.Dequeue();
+
+                    level_Data += temp.data;
+                    maxsum = Math.Max(level_Data, maxsum);
+
+                    Console.Write(" " + temp.data); //for debug
+
+                    if (temp.left != null)
+                        q.Enqueue(temp.left);
+
+                    if (temp.right != null)
+                        q.Enqueue(temp.right);
+
+                    size--;
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine(maxsum);
         }
     }
 }

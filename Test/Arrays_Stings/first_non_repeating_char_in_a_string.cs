@@ -10,21 +10,25 @@ namespace Test.Arrays_Stings
     {
         public first_non_repeating_char_in_a_string()
         {
-            string str = "geeksforgeeks";
+            string str = "geeksforgeeeks";
             non_repeat_char(str);
         }
 
         void non_repeat_char(string str)
         {
-            List<char> lis = new List<char>();
+            int[] count = new int[256];
 
-            for(int i=0;i<str.Length;i++)
+            for (int i = 0; i < str.Length; i++)
+                count[str[i]]++;
+
+
+            for (int i = 0; i < str.Length; i++)
             {
-                if (!lis.Contains(str[i]))
-                    lis.Add(str[i]);
-                else
-                    lis.Remove(str[i]);
-
+                if(count[str[i]]==1)
+                {
+                    Console.WriteLine(str[i]);
+                    break;
+                }
             }
         }
     }

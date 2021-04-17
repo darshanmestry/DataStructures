@@ -24,7 +24,7 @@ namespace Test
         {
 
 
-            remove_chars_from_first_string_which_are_present_in_second_string obj = new remove_chars_from_first_string_which_are_present_in_second_string();
+            delete_n_nodes_after_m_nodes obj = new delete_n_nodes_after_m_nodes();
 
             Console.WriteLine("done");
             Console.ReadLine();

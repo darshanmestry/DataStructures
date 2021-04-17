@@ -10,6 +10,7 @@ namespace Test.LinkedList
     {
         public given_only_pointer_for_node_tobe_deleted_delete_the_node()
         {
+            
             int[] arr = { 1, 2, 3, 4, 5, 6 };
             create_linked_list obj = new create_linked_list(arr);
         }

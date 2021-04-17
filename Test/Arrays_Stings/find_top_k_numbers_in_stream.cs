@@ -27,7 +27,7 @@ namespace Test.Arrays_Stings
         {
             int[] arr = { 5, 2, 1, 3, 4 };
             int k = 4;
-
+            practise(arr, k);
             print_stream_implement(arr, k);
             print_stream(arr, k);
         }
@@ -64,7 +64,7 @@ namespace Test.Arrays_Stings
                         top[j] = top[j + 1];
                         top[j + 1] = temp;
                     }
-                    else if (dict[top[j + 1]] == dict[top[j]] && top[j] > top[j + 1]) //frequency is and current element if gtreater then next element
+                    else if (dict[top[j + 1]] == dict[top[j]] && top[j] > top[j + 1]) //frequency is equal and current element if greater then next element
                     {
                         int temp = top[j];
                         top[j] = top[j + 1];
@@ -84,7 +84,54 @@ namespace Test.Arrays_Stings
             Console.WriteLine();
         }
 
+        void practise(int[] arr,int k)
+        {
+            int[] top = new int[k + 1];
 
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+
+            for (int i = 0; i < arr.Length; i++)
+                dict.Add(arr[i], 0);
+
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                if (!dict.ContainsKey(arr[i]))
+                    dict.Add(arr[i], 1);
+                else
+                    dict[arr[i]]++;
+
+
+                top[k] = arr[i];
+
+                int j = k-1;
+
+                while(j>=0)
+                {
+                    if(top[j+1]>top[j]) //This case is then top is like 0 0 0 0 5 and we want to convert it to 5 0 0 0 0
+                    {
+                        int temp = top[j + 1];
+                        top[j+1] = top[j];
+                        top[j]  = temp;
+                    }
+
+                    else if(dict[top[j]]==dict[top[j+1]] && top[j]>top[j+1]) //this case top is like 5 2 0 0 0 and we want to convert it to 2 5 0 0 0
+                    {
+                        int temp = top[j + 1];
+                        top[j + 1] = top[j];
+                        top[j] = temp;
+                    }
+                    j--;
+                }
+
+                for(int p=0;p<k;p++)
+                {
+                    if (top[p] != 0)
+                        Console.Write(top[p]+" ");
+                }
+            }
+           
+        }
         // solution copied from geek for geeks
         void print_stream(int[] a,int k)
         {

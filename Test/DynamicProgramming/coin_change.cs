@@ -24,15 +24,14 @@ namespace Test.DynamicProgramming
 
             int[] coins1 = { 1, 5, 6, 8 };
             int total1 = 11;
-            coin_change_dp(coins1, total1);
+            //coin_change_dp(coins1, total1);
+            practise(coin, total);
         }
 
         void coin_change_dp(int[] arr,int total)
         {
             int n = arr.Length;
             int[,] dp = new int[n, total + 1];
-
-
 
             for(int i=0;i<n;i++) 
             {
@@ -65,6 +64,42 @@ namespace Test.DynamicProgramming
             Console.WriteLine(dp[n-1, total]);
         }
 
+        void practise(int[] arr,int total)
+        {
+            int[,] dp = new int[arr.Length, total + 1];
 
+            //initialize 0th col will 0 
+            for (int i = 0; i < arr.Length; i++)
+                dp[i, 0] = 0;
+
+           for(int i=0;i<arr.Length;i++)
+            {
+                for(int j=1;j<=total;j++) //start with 1st col
+                {
+                    if(arr[i]>j)
+                    {
+                        if (i == 0)
+                            dp[i, j] = j;
+                        else
+                            dp[i, j] = dp[i - 1, j];
+                    }
+                    else
+                    {
+
+                        if (i == 0)
+                        {
+                            if (arr[i] == j) // if j=25 and arr[i]=25 with i=0
+                                dp[i, j] = Math.Min(j, dp[i, j - arr[i]] + 1);
+                            else
+                                dp[i, j] = j;
+                        }
+                        else
+                            dp[i, j] = Math.Min(dp[i - 1, j], 1 + dp[i, j - arr[i]]);
+                    }
+                }
+            }
+
+            int res = dp[arr.Length - 1, total];
+        }
     }
 }

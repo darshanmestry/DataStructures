@@ -10,7 +10,7 @@ namespace Test.Arrays_Stings
     {
         public count_of_n_digit_nos_whoes_sum_is_equal_to_given_sum()
         {
-            count_n_digit(2, 2);
+            count_n_digit(3, 6);
 
         }
 
@@ -36,7 +36,7 @@ namespace Test.Arrays_Stings
                 }
                 if (temp_sum == sum)
                 {
-                    i += 8; //increment by 9 but as for look is used it will by default increment by  9 so increment by 8
+                    i += 8; //increment by 9 but as for loop is used it will by default increment by  9 so increment by 8
                     count++;
                 }
             }

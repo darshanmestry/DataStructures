@@ -23,8 +23,9 @@ Finally traverse both smaller[] and greater[] and find the index [i] for which b
         public find_sorted_subsequence_of_size_3_in_linear_Time()
         {
             int[] arr = { 12, 11, 10, 5, 6, 2, 30 };
-
+            int[] arr2 = { 4, 3, 2, 1 };
             sorted_subsequnce(arr);
+            Optimized_solution(arr2);
         }
 
         void sorted_subsequnce(int[] arr)
@@ -74,5 +75,54 @@ Finally traverse both smaller[] and greater[] and find the index [i] for which b
                 }
             }
         }
+  
+    
+        void Optimized_solution(int[] arr)
+        {
+            if (arr.Length < 3)
+                Console.WriteLine("No triplets found");
+
+
+            int seq = 1;
+
+            int temp_first_elem = arr[0];
+            int first_elem = temp_first_elem; // used to store the 1st element of result 
+            int second_elem = int.MinValue; //used to store 2nd element of result
+
+            for(int i=1;i<arr.Length;i++)
+            {
+
+                if (arr[i] == temp_first_elem) //continue if curent element is equal to minimum no
+                    continue;
+
+                else if(arr[i]<temp_first_elem) //if current element is smaller then min then update min
+                {
+                    temp_first_elem = arr[i];
+                    continue;
+                }
+                else if(arr[i]<second_elem) //this if block will only run when value of seq=2 ,in this we store 1st elem of result in store in and 2nd elem of res in max_seq
+                {
+                    second_elem = arr[i];
+                    first_elem = temp_first_elem;
+                }
+                else if(arr[i]>second_elem)  //if current element is greater than max_seq then update max_seq with current elem
+                {
+                    seq++;
+
+                    if(seq==3)
+                    {
+                        Console.WriteLine(first_elem + " " + second_elem + " " + arr[i]);
+                        return;
+                    }
+                    second_elem = arr[i];
+                    first_elem = temp_first_elem;
+                }
+
+            }
+
+            Console.WriteLine("No triplets found");
+        }
+
+
     }
 }

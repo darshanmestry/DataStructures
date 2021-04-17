@@ -38,7 +38,8 @@ namespace Test.Tree
             root.right.left = new Node(7);
             root.right.right = new Node(5);
 
-            convert(root);
+            //convert(root);
+            convertPractise(root);
         }
 
         int convert(Node root)
@@ -51,6 +52,27 @@ namespace Test.Tree
 
             return root.data + olddata;
 
+        }
+    
+        int convertPractise(Node root)
+        {
+            if (root == null)
+                return 0;
+
+            if (root.left == null && root.right == null)
+            {
+                int temp = root.data;
+                root.data = 0;
+                return temp;
+            }
+
+            int leftData = convertPractise(root.left);
+            int rightData = convertPractise(root.right);
+
+            int oldData = root.data;
+            root.data = leftData + rightData;
+
+            return root.data +oldData;
         }
     }
 }

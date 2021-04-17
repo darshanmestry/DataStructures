@@ -18,14 +18,20 @@ namespace Test.Arrays_Stings
 
          Input: {1, 1, 0, -1, -2}
          Output: 2 
+
+    Approach:
+
+    In this problem, we have created a list full of 0’s with size of the max() value of our given array. Now, whenever we encounter any positive value in our original array,
+    we change the index value of our list to 1. 
+    So, after we are done, we simply iterate through our modified list, the first 0 we encounter, its (index value + 1) should be our answer since index in python starts from 0.
      */
     class find_smallest_positive_missing_no_from_unsorted_array
     {
         public find_smallest_positive_missing_no_from_unsorted_array()
         {
-            //int[] arr = { 0, 10, 2, -10, -20 };
+            int[] arr = { 0, 10, 2, -10, -20 };
             //int[] arr = { 2, 3, -7, 6, 8, 1, -10, 15 };
-            int[] arr = { 1, 1, 0, -1, -2 };
+            //int[] arr = { 1, 1, 0, -1, -2 };
             int res=printSmallestMissing(arr);
         }
         int printSmallestMissing(int[] arr)
@@ -64,6 +70,41 @@ namespace Test.Arrays_Stings
             }
         }
 
+        int practise(int[] arr)
+        {
+            int max = arr.Max();
+
+            if(arr.Length==1)
+            {
+                return 1;
+            }
+            else
+            {
+                int[] temp = new int[max];
+                
+                for(int i=0;i<arr.Length;i++)
+                {
+                    if (arr[i] > 0)
+                        temp[arr[i] - 1] = 1;
+                }
+
+                int res = -1;
+                for(int i=0;i<max;i++)
+                {
+                    if(temp[i]==0)
+                    {
+                        res = i + 1;
+                       
+                    }
+                }
+
+                if (res != -1)
+                    return res;
+                else
+                    return max + 1;
+            }
+
+        }
         int segregate(int[] arr)
         {
             int left = 0;
@@ -93,5 +134,7 @@ namespace Test.Arrays_Stings
 
             return left;
         }
+   
+    
     }
 }

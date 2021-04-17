@@ -16,8 +16,8 @@ namespace Test.BackTracking
             int x = 8;
 
             calcuate_sum(arr, x);
-
-           list=list.OrderBy(i => i).ToList();
+            //Prac_sum(arr, x);
+           list =list.OrderBy(i => i).ToList();
 
         }
 
@@ -102,6 +102,57 @@ namespace Test.BackTracking
                    return  binarysearch(arr, start, mid - 1, no);
             }
             return -1;
+        }
+   
+        void Prac_sum(int[] arr,int x)
+        {
+            for(int i=0;i<arr.Length;i++)
+            {
+                prac_util(arr, 1, arr[i], x);
+            }
+        }
+
+        bool prac_util(int[] arr,int element_cnt,int no,int x)
+        {
+            if(element_cnt*no==x) // if elemt_cnt=4 and no=2 and x=8 
+            {
+                string str = "";
+                for(int i=0;i<element_cnt;i++)
+                {
+                    str += no.ToString()+" ";
+                }
+
+                if (!list.Contains(str))
+                    list.Add(str);
+
+                return true;
+
+               
+            }
+
+            if (element_cnt * no > x)
+                return false;
+
+            int rem_no = x - (element_cnt * no);
+            if (element_cnt * no < x && search(arr, rem_no))
+            {
+                string str = "";
+                for (int i = 0; i < element_cnt; i++)
+                {
+                    str += no.ToString() + " ";
+                }
+
+                str += rem_no.ToString() + " ";
+                if (!list.Contains(str))
+                    list.Add(str);
+            }
+
+            if(prac_util(arr,element_cnt+1,no,x))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Test.LinkedList
             cur.next = obj.head;
 
 
-            insert_in_circular_linked_list(obj.head, 6);
+            insert_in_circular_linked_list(obj.head, 4);
         }
 
         /*

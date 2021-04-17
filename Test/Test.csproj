@@ -65,7 +65,9 @@
     <Compile Include="Arrays_Stings\max_size_rectangle_in_binary_sub_matrix.cs" />
     <Compile Include="Arrays_Stings\next_smallest_palindrome_larger_than_no.cs" />
     <Compile Include="Arrays_Stings\no_of_substrings_that_start_and_end_with_1.cs" />
+    <Compile Include="Arrays_Stings\number_of_paths_with_exactly_k_coins.cs" />
     <Compile Include="Arrays_Stings\print_max_no_of_A_using_crtlA_crtlV_crtlC.cs" />
+    <Compile Include="Arrays_Stings\sub_matrix_sub_queries.cs" />
     <Compile Include="BackTracking\boggle.cs" />
     <Compile Include="Arrays_Stings\boolean_matrix_question.cs" />
     <Compile Include="Arrays_Stings\build_lowest_no_by_removing_n_digits.cs" />
@@ -238,6 +240,7 @@
     <Compile Include="LinkedList\sort_0s_1s_and_2s_in_a_linkedlist.cs" />
     <Compile Include="LinkedList\sort_a_linkedlist_that_is_sorted_alternating_asc_and_dsc_order.cs" />
     <Compile Include="LinkedList\sort_linked_list_which_is_already_sorted_with_absolute_values.cs" />
+    <Compile Include="LinkedList\union_and_intersection_of_2_linkedlists.cs" />
     <Compile Include="Stack\sort_stack_using_recursion.cs" />
     <Compile Include="Tree\add_all_greater_values_to_every_node_in_given_bst.cs" />
     <Compile Include="Tree\bottom_view_of_the_tree.cs" />
@@ -247,7 +250,7 @@
     <Compile Include="Tree\connect_nodes_at_same_level.cs" />
     <Compile Include="Tree\construct_binary_tree_from_parent_Array_represenatation.cs" />
     <Compile Include="Tree\construct_btree_from_linkedlist_representation.cs" />
-    <Compile Include="Tree\construct_tree_from__given_preorder_traversal.cs" />
+    <Compile Include="Tree\construct_special_tree_from__given_preorder_traversal.cs" />
     <Compile Include="Tree\delete_node_in_bst.cs" />
     <Compile Include="LinkedList\del_all_coocurences_of_key_in_linked_list.cs" />
     <Compile Include="Tree\determine_if_tree_is_height_balanced.cs" />
@@ -262,6 +265,7 @@
     <Compile Include="Tree\check_if_two_trees_are_mirror_tree.cs" />
     <Compile Include="Tree\convert_binary_tree_to_binary_search_tree.cs" />
     <Compile Include="Tree\convert_tree_to_sum_tree.cs" />
+    <Compile Include="Tree\determine_if_two_trees_are_identical.cs" />
     <Compile Include="Tree\diagonal_traversal_of_binary_tree.cs" />
     <Compile Include="Tree\diameter_of_binary_tree.cs" />
     <Compile Include="Tree\difference_between_sum_of_odd_level_and_even_level_nodes_of_btree.cs" />
@@ -280,6 +284,7 @@
     <Compile Include="Tree\level_order_traversal.cs" />
     <Compile Include="Tree\level_order_traversal_spiral_form.cs" />
     <Compile Include="Tree\longest_consecutive_sequence_in_binary_tree.cs" />
+    <Compile Include="Tree\lowest_common_ancestor_binary_search_tree.cs" />
     <Compile Include="Tree\lowest_common_ancestor_binary_tree.cs" />
     <Compile Include="Tree\max_diff_between_node_and_its_ancestor_in_btree.cs" />
     <Compile Include="Tree\node.cs" />

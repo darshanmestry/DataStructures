@@ -15,7 +15,7 @@ namespace Test.Heap
         int capacity;
         public binary_heap()
         {
-            int check = (4 - 1) / 2;
+          
             capacity = 10;
             heap = new int[capacity];
 

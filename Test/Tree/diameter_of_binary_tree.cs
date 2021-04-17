@@ -62,5 +62,28 @@ namespace Test.Tree
                 return rightHeight + 1;
 
         }
+   
+    
+      
+        int DiameterPractise(Node root)
+        {
+            if (root == null)
+                return 0;
+
+            int lheight = getHeight(root.left);
+            int rheight = getHeight(root.right);
+
+            int lDiameter = DiameterPractise(root.left);
+            int rDiameter = DiameterPractise(root.right);
+
+
+            int LandRWithRoot = lheight + rheight + 1;
+            int WithOutRoot = Math.Max(lDiameter, rDiameter);
+
+            int res = Math.Max(LandRWithRoot, WithOutRoot);
+
+            return res;
+        }
+    
     }
 }

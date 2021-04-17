@@ -52,5 +52,36 @@ namespace Test.Arrays_Stings
         }
 
 
+        void zigPractise(int[] arr)
+        {
+            bool flag = true;
+
+            for(int i=0;i<arr.Length-1;i++)
+            {
+                if(flag)
+                {
+                    if(arr[i]>arr[i+1])
+                    {
+
+                        int temp = arr[i];
+                        arr[i + 1] = arr[i];
+                        arr[i] = temp;
+                    }
+                    flag = false;
+                }
+                else
+                {
+                    if(arr[i]<arr[i+1])
+                    {
+                        int temp = arr[i];
+                        arr[i + 1] = arr[i];
+                        arr[i] = temp;
+                    }
+                    flag = true;
+                }
+               
+            }
+        }
+
     }
 }

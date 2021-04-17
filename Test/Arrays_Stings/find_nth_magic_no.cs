@@ -27,7 +27,7 @@ namespace Test.Arrays_Stings
 
 
              */
-            magicNo(1);
+           // magicNo(1);
             magicNo(2);
             magicNo(3);
             magicNo(4);

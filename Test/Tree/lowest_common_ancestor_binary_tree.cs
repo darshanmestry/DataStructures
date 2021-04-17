@@ -31,7 +31,7 @@ namespace Test.Tree
             Node n1 = new Node(4);
             Node n2 = new Node(5);
 
-            Node lcanode=lca(root, n1, n2);
+            //Node lcanode=lca(root, n1, n2);
 
 
             Node lcanode1= lca(root, new Node(5),new Node(7));
@@ -53,11 +53,11 @@ namespace Test.Tree
             Node l1 = lca(root.left, n1, n2);
             Node l2 = lca(root.right, n1, n2);
 
-            if (l1 != null && l2 != null)
+            if (l1 != null && l2 != null) //if both nodes are not null it means this is the lca node
                 return root;
 
 
-           return (l1 !=null ? l1: l2);
+           return (l1 !=null ? l1: l2); //return whatever is not null
         }
 
 

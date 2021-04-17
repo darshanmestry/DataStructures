@@ -47,6 +47,7 @@ namespace Test.Arrays_Stings
             int[] arr2 = { 1, 5, 7, 8 };
 
             max_sum_path(arr1, arr2);
+            practise(arr1, arr2);
         }
 
         void max_sum_path(int[] arr1,int[] arr2)
@@ -100,6 +101,60 @@ namespace Test.Arrays_Stings
 
             res += Math.Max(sum1, sum2);
 
+
+            Console.WriteLine(res);
+        }
+   
+        void practise(int[] arr1,int[] arr2)
+        {
+            int res = 0;
+            int n1 = arr1.Length;
+            int n2 = arr2.Length;
+
+            int sum1 = 0, sum2 = 0;
+            int i = 0,j = 0;
+            while(i<n1 && j<n2)
+            {
+                if(arr1[i]!=arr2[j]) // keep adding arr1 elem to sum1 and arr2 elem to sum 2 till we find a common element
+                {
+                    sum1 += arr1[i];
+                    sum2 += arr2[j];
+                }
+                else 
+                {
+                    res = Math.Max(sum1, sum2);
+
+                    sum1 = 0;sum2 = 0;
+
+                    while (i < n1) //from common elent add all elem of arr 1
+                    {
+                        sum1 += arr1[i];
+                        i++;
+                    }
+
+                    while (j < n2) // from common elent add all elem of arr 2
+                    {
+                        sum2 += arr2[j];
+                        j++;
+                    }
+
+                    res += Math.Max(sum1, sum2); //append to the res whatever is max 
+                }
+                i++;
+                j++;
+            }
+
+            sum1 = 0;
+            while (i < n1)
+                sum1 += arr1[1];
+
+            sum2 = 0;
+            while (j < n2)
+                sum2 += arr2[j];
+
+            res += Math.Max(sum1, sum2);
+
+            Console.WriteLine(res);
 
 
         }

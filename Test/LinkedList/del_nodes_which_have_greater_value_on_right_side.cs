@@ -36,9 +36,15 @@ namespace Test.LinkedList
             delNode(obj.head);
         }
 
+        /*
+         1. Reverse the list. 
+        2. Traverse the reversed list. Keep max till now. If next node is less than max, then delete the next node, otherwise max = next node. 
+        3. Reverse the list again to retain the original order. 
+         */
         void delNode(Node head)
         {
-            Node cur = reverse(head);
+            Node temp1 = head;
+            Node cur = reverse(temp1);
             
 
 

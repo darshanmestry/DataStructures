@@ -45,5 +45,10 @@ namespace Test.Arrays_Stings
                 }
             }
         }
+
+        void practise(int[] arr,int sum)
+        {
+
+        }
     }
 }

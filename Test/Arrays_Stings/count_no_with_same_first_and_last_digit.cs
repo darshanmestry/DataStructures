@@ -30,8 +30,8 @@ namespace Test.Arrays_Stings
              */
         public count_no_with_same_first_and_last_digit()
         {
-            int start = 150;
-            int end = 160;
+            int start = 37;
+            int end = 68;
 
             int count = getCount(start, end);
         }
@@ -76,6 +76,37 @@ namespace Test.Arrays_Stings
                 x = x / 10;
 
             return x;
+        }
+    
+    
+        
+        int practise(int start,int end)
+        {
+            int span = end / 10;
+
+            if(start<9)
+            {
+                span = span + (10 - start);
+
+                int fdigit = GetFirstDigit(end);
+                int ldigit = end % 10;
+
+                if (fdigit > ldigit)
+                    span--;
+
+            }
+            else
+            {
+                span = span - (start / 10);
+
+                int fdigit = GetFirstDigit(start);
+                int ldigit = start % 10;
+
+                if (ldigit > fdigit)
+                    span--;
+            }
+
+            return span;
         }
     }
 }

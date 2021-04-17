@@ -25,14 +25,22 @@ namespace Test.Arrays_Stings
          */
         public find_smallest_window_in_a_string_containing_all_chars_of_another_string()
         {
-            //string str = "geeksforgeeks";
-            //string pattern = "ork";
+             string str1 = "geeksforgeeks";
+             string pattern1 = "ork";
 
-            string str = "this is a test string";
-            string pattern = "tist";
+            string str2 = "this is a test string";
+            string pattern2 = "tist";
+
+            string str = "aaacbdaccdb";
+            string pattern = "ab";
             //find_substr(str, pattern);
             //findSubString(str, pattern);
-            find_str(str, pattern);
+
+
+            //find_str(str, pattern);
+            practise(str, pattern);
+            practise(str1, pattern1);
+            practise(str2, pattern2);
         }
 
         // solution implemented by Darshan
@@ -78,7 +86,55 @@ namespace Test.Arrays_Stings
                     }
                 }      
             }
-            Console.WriteLine(str.Substring(start,min));
+            Console.WriteLine(str.Substring(start_index, min));
+        }
+
+
+        void practise(string str,string pat)
+        {
+            int max = 256;
+
+            int[] hashStr = new int[max];
+            int[] hashPat = new int[max];
+
+            int count = 0;
+            int minWindow = int.MaxValue;
+            int startIndexFinal = -1;
+            int start = 0;
+
+            for (int i = 0; i < pat.Length; i++)
+                hashPat[pat[i]]++;
+
+
+           
+            for(int i=0;i<str.Length;i++)
+            {
+                hashStr[str[i]]++;
+
+
+                if (hashStr[str[i]] != 0 && hashStr[str[i]] <= hashPat[str[i]])
+                    count++;
+
+                if (count==pat.Length)
+                {
+    
+                    while(hashStr[str[start]]>hashPat[str[start]])
+                    {
+                        hashStr[str[start]]--;
+                        start++;
+                    }
+
+                    int endwindow = i - start+1;
+                    if(endwindow <minWindow)
+                    {
+                        startIndexFinal = start;
+                        minWindow = endwindow;
+
+                    }              
+                }
+            }
+            string res = str.Substring(startIndexFinal, minWindow);
+            Console.WriteLine(res);
         }
 
         // Solution from geekforgeeks

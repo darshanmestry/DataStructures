@@ -19,7 +19,11 @@ namespace Test.Arrays_Stings
         public next_greater_element_in_array()
         {
             int[] arr = { 4, 5, 2, 25 };
-            print_next_greater_element(arr);
+            // print_next_greater_element(arr);
+            practise(arr);
+
+            int[] arr2= { 11, 13, 21, 3 };
+            practise(arr2);
         }
 
         void print_next_greater_element(int[] arr)
@@ -51,6 +55,32 @@ namespace Test.Arrays_Stings
             {
                 Console.WriteLine(st.Peek() + "--> -1");
                 st.Pop();
+            }
+        }
+   
+        void practise(int[] arr)
+        {
+            Stack<int> st = new Stack<int>();
+
+            if (arr.Length == 1)
+                Console.WriteLine("Next element of " + arr[0] + " is -1");
+
+
+            st.Push(arr[0]);
+
+            for(int i=1;i<arr.Length;i++)
+            {
+                while (st.Count>0 && arr[i] > st.Peek())
+                {
+                    Console.WriteLine("Next element of " +st.Pop() + " is "+arr[i]);
+                }
+
+                st.Push(arr[i]);
+            }
+
+            while (st.Count > 0)
+            {
+                Console.WriteLine("Next element of " + st.Pop() + " is -1 ");
             }
         }
     }

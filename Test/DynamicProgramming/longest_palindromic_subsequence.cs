@@ -51,5 +51,32 @@ namespace Test.DynamicProgramming
 
             Console.WriteLine(dp[0, len-1]);
         }
+    
+    
+        void practise(string str)
+        {
+            int rowlen = str.Length;
+            int collen = str.Length;
+
+            int[,] dp = new int[rowlen, collen];
+
+
+            for (int i = 0; i < str.Length; i++)
+                dp[i, i] = 1;
+
+            for(int col=1; col < str.Length; col++)
+            {
+                for(int row=0;row<str.Length-col;row++)
+                {
+                    int j = row + col;
+                    if (str[j] != str[row])
+                        dp[col, row] = Math.Max(dp[col, row - 1], dp[col + 1, row]);
+                    else
+                    {
+                        dp[col, row] = 2 + dp[row + 1, j - 1];
+                    }
+                }
+            }
+        }
     }
 }

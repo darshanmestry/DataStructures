@@ -28,13 +28,16 @@ namespace Test.LinkedList
 
             while(fast!=null && fast.next!=null)
             {
-                PrevToSlow = slow;
+                PrevToSlow = slow; //this is needed to join the list linkedlist if of even length and we need to join the linkedlist to make it in original form
                 slow = slow.next;
                 fast = fast.next.next;
             }
 
-            if(fast!=null)
+            if(fast!=null)       
             {
+                // fast will not be null if linked list if of odd length. 
+                //E.g. 1 -> 2 -> 3 -> 4 ->5 here slow will be 3 and fast will be 5 in this case store midnode and slow.next will give 2nd part of linkedlist
+
                 midnode = slow;
                 slow = slow.next;
                

@@ -34,7 +34,7 @@ namespace Test.BackTracking
                 {
                     str = swap(str, startIndex, i);
                     printPermutation(str, startIndex + 1, endIndex);
-                    str = swap(str, startIndex, i);
+                   // str = swap(str, startIndex, i);
                 }
             }
 

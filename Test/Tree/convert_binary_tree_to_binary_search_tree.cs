@@ -86,7 +86,7 @@ namespace Test.Tree
 
             inorder = inorder.OrderBy(i => i).ToList(); // sort list
 
-            arrayToBst(root);
+            arrayToBst(root); //Again to inorder Traversal and copy the elements of inoder sorted array to the tree
         }
 
         void arrayToBst(Node root)

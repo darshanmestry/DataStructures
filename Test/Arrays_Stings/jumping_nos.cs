@@ -31,14 +31,20 @@ namespace Test.Arrays_Stings
     {
         public jumping_nos()
         {
-            jump_no(105);
+            jump_no(20);
+            //practise(20);
         }
 
         void jump_no(int no)
         {
-            for(int i=1;i<=9&&i<=no;i++)
+            //for (int i = 1; i <= 9 && i <= no; i++)
+            //{
+            //    bfs_util(no, i);
+            //}
+
+            for (int i = 1; i <= 9; i++)
             {
-                bfs_util(no, i); 
+                bfs_util(no, i);
             }
         }
 
@@ -78,6 +84,45 @@ namespace Test.Arrays_Stings
                 }
             }
 
+        }
+    
+    
+    
+        void practise(int no)
+        {
+            for(int i=1;i<=9;i++)
+            {
+                practise_util(i, no);
+            }
+        }
+        void practise_util(int i,int no)
+        {
+            Queue<int> q = new Queue<int>();
+            q.Enqueue(i);
+
+            while(q.Count()>0)
+            {
+               i = q.Dequeue();
+
+                if (i <= no)
+                {
+                    Console.WriteLine(i);
+
+                    int lastDigit = i % 10;
+
+                    if (lastDigit == 0)
+                        q.Enqueue((i * 10) + lastDigit + 1);
+
+                    else if (lastDigit == 9)
+                        q.Enqueue((i * 10) + lastDigit - 1);
+
+                    else
+                    {
+                        q.Enqueue((i * 10) + lastDigit + 1);
+                        q.Enqueue((i * 10) + lastDigit - 1);
+                    }
+                }
+            }
         }
     }
 }

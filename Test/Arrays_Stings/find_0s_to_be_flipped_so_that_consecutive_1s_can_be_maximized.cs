@@ -26,6 +26,7 @@ namespace Test.Arrays_Stings
         {
             int[] arr = { 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1 };
             int m = 2;
+            practise(arr, m);
             // find_flip(arr,m);
             find_flip__implement(arr, m);
         }
@@ -69,6 +70,48 @@ namespace Test.Arrays_Stings
             }
         }
 
+
+        void practise(int[] arr,int m)
+        {
+            int wL = 0, wR = 0;
+
+            int zeroCount = 0;
+
+            int bestL = 0, bestR = 0;
+
+            while(wR<arr.Length)
+            {
+
+                if(zeroCount<=m)
+                {
+
+                    if ( wR<arr.Length && arr[wR] == 0)
+                        zeroCount++;
+
+                    wR++;
+                }
+
+                if(zeroCount>m)
+                {
+                    if (arr[wL] == 0 )
+                        zeroCount--;
+
+                    wL++;
+                }
+
+                if((wR-wL)>bestR)
+                {
+                    bestL = wL;
+                    bestR = wR;
+                }
+            }
+
+            for(int i=bestL;i<=bestR;i++)
+            {
+                if (arr[i] == 0)
+                    Console.Write(" " + i);
+            }
+        }
         //Copied solution from Geekforgeels
         void find_flip(int[] arr,int m)
         {

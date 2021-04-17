@@ -47,7 +47,7 @@ namespace Test.LinkedList
                 cur2.data = temp;
 
                 cur1 = cur1.next.next;
-                if (cur2.next!= null)  //condition to ceck last node
+                if (cur2.next!= null)  //condition to ceck last node  and this condition will be true when no of elements are odd
                     cur2 = cur2.next.next;
                 else
                     cur2 = cur2.next; 

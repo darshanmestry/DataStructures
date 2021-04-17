@@ -12,7 +12,8 @@ namespace Test.DynamicProgramming
         {
             int[] arr = { 1, 101, 2, 3, 100, 4, 5 };
 
-            subsequence(arr);
+            //subsequence(arr);
+            practise(arr);
         }
 
         /*
@@ -56,6 +57,33 @@ namespace Test.DynamicProgramming
             }
 
             Console.WriteLine(max);
+
+        }
+   
+    
+        void practise(int[] arr)
+        {
+            int[] dp = new int[arr.Length];
+
+            for (int itr = 0; itr < arr.Length; itr++)
+                dp[itr] = arr[itr];
+
+
+            int j = 0, i = 1;
+
+            while(i<arr.Length)
+            {
+                j = 0;
+
+                while(j<i)
+                {
+                    if (arr[j] < arr[i])
+                        dp[i] = Math.Max(dp[i], dp[j] + arr[i]);
+
+                    j++;
+                }
+                i++;
+            }
 
         }
     }

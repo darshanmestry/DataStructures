@@ -31,10 +31,22 @@ namespace Test.Arrays_Stings
 
             //maxSum(arr);
             max_sum_practise(arr);
+            //practise_latest(arr);
         }
 
         void max_sum_practise(int[] arr)
         {
+            /*
+             *  Input : arr[] = {5, 5, 10, 100, 10, 5}
+                    Output : 110
+
+                     arr      5, 5, 10, 100, 10, 5
+              i_minus_2       0, 5, 5 , 15 , 105,105 
+                    cur       5, 5, 15, 105, 25, 110
+
+              
+               cur=arr[i]+i_minus_2
+             */
             int i_minus_2 = 0;
             int cur = arr[0];
 
@@ -100,5 +112,8 @@ namespace Test.Arrays_Stings
             int sum = Math.Max(include_cur_element, prev_to_adj);
             Console.WriteLine(sum);
         }
+   
+        
+    
     }
 }

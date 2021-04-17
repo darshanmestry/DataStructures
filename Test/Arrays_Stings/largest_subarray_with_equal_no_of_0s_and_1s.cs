@@ -43,7 +43,7 @@ Output: 0 to 3 Or 1 to 4
             leftsum[0] = arr[0] == 1 ? 1 : -1;
             for (int i = 1; i < arr.Length; i++)
             {
-
+                // Left sum is addition of whatever leftsum we have got in last iteration + the current value of arrray i.e arr[i];
                 int a = arr[i];
                 a = (a == 0) ? -1 : arr[i];
                 leftsum[i] = leftsum[i - 1] + a;
@@ -55,6 +55,7 @@ Output: 0 to 3 Or 1 to 4
             bool found = false;
             for(int i=0;i<arr.Length;i++)
             {
+                //To get start index find first occurenence of the 0 in leftsum
                 if (leftsum[i] <= 0 && !found) //start index if that index whose value is less than of equal to 0;
                 {
                     start_index = i;
@@ -62,7 +63,7 @@ Output: 0 to 3 Or 1 to 4
                     found = true;
                 }
 
-
+                //To get end index last first occurenence of the 1 in leftsum
                 if (found && leftsum[i] - 1 == start_value) //Condition for end index
                     end_index = i;
             }

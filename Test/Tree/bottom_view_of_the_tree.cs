@@ -10,6 +10,16 @@ namespace Test.Tree
     {
         public bottom_view_of_the_tree()
         {
+            /*
+                       20
+                     /    \
+                   8       22
+                 /   \     /  \
+               5      3   4   25
+                     / \      
+                   10    14
+            For the above tree the output should be 5, 10, 4, 14, 25.
+             */
             Node root = new Node(20);
             root.left = new Node(8);
             root.right = new Node(22);

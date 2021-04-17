@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Test.Tree
 {
-    class construct_tree_from__given_preorder_traversal
+    class construct_special_tree_from__given_preorder_traversal
     {
         Node root;
         int index = 0;
-        public  construct_tree_from__given_preorder_traversal()
+        public  construct_special_tree_from__given_preorder_traversal()
         {
             /*
              * Input:  pre[] = {10, 30, 20, 5, 15},  preLN[] = {'N', 'N', 'L', 'L', 'L'}
@@ -59,7 +59,7 @@ namespace Test.Tree
 
                 temp.right = new Node(arr[index]);
                 index++;
-                return temp;
+                //return temp;
             }
 
             return temp;

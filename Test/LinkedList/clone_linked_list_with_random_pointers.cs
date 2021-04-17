@@ -33,9 +33,9 @@ namespace Test.LinkedList
             Console.WriteLine("Before Original linked List cloning");
             print(head);
 
-            clone_linkedList(head);
+            //clone_linkedList(head);
 
-
+            CloneLL_MyEasy_Approach(head);
         }
 
         void clone_linkedList(Node head)
@@ -88,6 +88,39 @@ namespace Test.LinkedList
 
         }
     
+
+        void CloneLL_MyEasy_Approach(Node head)
+        {
+            Node Cloned = new Node(0);
+            Node cur3 = head;//this is needed to set random pointers by traversing head from start
+            Node cur1 = head;
+            Node cur2 = Cloned;
+
+
+            //Clone the given linkedlist with keeping random pointers as null
+
+            while(cur1!=null)
+            {
+                cur2.next = new Node(cur1.data);
+                cur1 = cur1.next;
+                cur2 = cur2.next;
+            }
+
+            // Clone the randow Pointers
+            Cloned = Cloned.next; //Removing the dummy node added at start
+
+            cur2 = Cloned;//Aagin setting cloned to cur2 as cur2 will be used to iterate thru linkedList
+
+            while(cur3!=null && cur2!=null)
+            {
+                cur2.ramdom = cur3.ramdom; //seting random pointer of original LL to cloned LL
+                cur3 = cur3.next; //this is original LL
+                cur2 = cur2.next; //this is Cloned LL
+            }
+
+            print(Cloned);
+            
+        }
         void print(Node head)
         {
             Console.WriteLine();

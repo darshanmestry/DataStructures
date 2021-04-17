@@ -57,5 +57,24 @@ namespace Test.Tree
 
             return sum;
         }
+  
+        int practise(Node root,int sum)
+        {
+            if (root == null)
+                return sum;
+
+
+            sum=practise(root.right, sum);
+
+
+            sum += root.data;
+
+            root.data = sum;
+
+            sum = practise(root.left, sum);
+
+            return sum;
+
+        }
     }
 }

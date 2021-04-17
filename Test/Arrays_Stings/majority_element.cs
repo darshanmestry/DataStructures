@@ -11,7 +11,8 @@ namespace Test.Arrays_Stings
         public majority_element()
         {
             /*
-             * Write a function which takes an array and prints the majority element (if it exists), otherwise prints “No Majority Element”. A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
+             * Write a function which takes an array and prints the majority element (if it exists), otherwise prints “No Majority Element”. 
+             * A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
             Examples :
 
             Input : {3, 3, 4, 2, 4, 4, 2, 4, 4}
@@ -19,8 +20,23 @@ namespace Test.Arrays_Stings
 
             Input : {3, 3, 4, 2, 4, 4, 2, 4}
             Output : No Majority Element
+
+            Approach
+            1. Find index of the element occuring max no of times using moores algo.
+                    1.1 Moore voting algo
+                        a.  check cur and prev elemt of array
+                            if they are same then increment the cnt i.e. cnt++
+                            else
+                                cnt--;
+
+                        b. if(cnt=0)
+                                prev=i
+                                cnt=1;
+            2. Find occurenec count using of the elemt[index] got in previous step
+            3
              */
 
+            
             int[] arr1 = { 3, 3, 4, 2, 4, 4, 2, 4, 4 }; //case 1
             //majority(arr1);
 

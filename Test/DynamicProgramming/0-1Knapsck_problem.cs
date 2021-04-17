@@ -57,5 +57,33 @@ namespace Test.DynamicProgramming
 
             Console.WriteLine(dp[rowLen-1, colLen-1]);
         }
+   
+    
+        void Practise(int[] wt,int[] val,int W)
+        {
+            int rowLen = wt.Length;
+            int colLen = val.Length + 1;
+
+            int[,] dp = new int[rowLen, colLen];
+
+            for (int i = 1; i < colLen; i++)
+                dp[0, i] = 1;
+
+            for (int i = 0;i< rowLen; i++)
+                dp[i, 0] = 0;
+
+            for(int i=1;i<rowLen;i++)
+            {
+                for(int j=1;j<colLen;j++)
+                {
+                    if (j < wt[i])
+                        dp[i, j] = dp[i - 1, j];
+                    else
+                        dp[i, j] = Math.Max(val[i] + dp[i - 1, j - wt[i]], dp[i - 1, j]);
+                }
+            }
+
+
+        }
     }
 }

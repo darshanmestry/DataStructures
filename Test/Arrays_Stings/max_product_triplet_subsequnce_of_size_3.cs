@@ -30,6 +30,10 @@ namespace Test.Arrays_Stings
             findTriple(arr2);
             findTriple(arr3);
 
+            practise(arr1);
+            practise(arr2);
+            practise(arr3);
+
         }
 
 
@@ -70,6 +74,53 @@ namespace Test.Arrays_Stings
             int prod_possiility2 = min1 * min2 * max1;
 
             Console.WriteLine(prod_possiility1 > prod_possiility2 ? prod_possiility1 : prod_possiility2);
+        }
+   
+        void practise(int[] arr)
+        {
+            int first_max=int.MinValue, second_max=int.MinValue, thrid_max = int.MinValue;
+
+            int first_min=int.MaxValue, second_min = int.MaxValue;
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                if(arr[i]>first_max) //while changing 1st max, 2nd max will become 1st max and 3rd max will become 2nd max
+                {
+                    thrid_max = second_max;
+                    second_max = first_max;
+                    first_max = arr[i];
+                }
+                else if(arr[i]>second_max)
+                {
+                    thrid_max = second_max;
+                    second_max = arr[i];
+                }
+                else if(arr[i]>thrid_max)
+                {
+                    thrid_max = arr[i];
+                }
+
+                if (arr[i] < 0)
+                {
+                    if (arr[i] < first_min)
+                    {
+                        second_min = first_min;
+                        first_min = arr[i];
+                    }
+                    else if (arr[i] < second_min)
+                    {
+                        second_min = arr[i];
+                    }
+                }
+            }
+
+            int res_possibily_1 = first_max * second_max * thrid_max;
+
+            int res_poosibilty_2 = first_max * first_min * second_min;
+
+            int final_res = Math.Max(res_possibily_1, res_poosibilty_2);
+
+            Console.WriteLine(final_res);
         }
     }
 }

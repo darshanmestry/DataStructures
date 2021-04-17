@@ -23,13 +23,14 @@ namespace Test.Arrays_Stings
           
 
             string str3 = "ABDEFGABEF"; //case 1;
-            longgest_substring(str3);
-
+            //longgest_substring(str3);
+            Practise(str3);
             string str2 = "BBBB"; //case 2;
-            longgest_substring(str2);
+            //longgest_substring(str2);
+            Practise(str2);
 
             string str = "GEEKSFORGEEKS"; //case 3
-            longgest_substring(str);
+            //longgest_substring(str);
         }
 
         void longgest_substring(string str)
@@ -76,6 +77,37 @@ namespace Test.Arrays_Stings
             }
 
             Console.WriteLine(len+1);
+        }
+   
+        void Practise(string str)
+        {
+            int[] count = new int[256];
+
+            int start_index = 0;
+            int end_index = -1;
+
+            int res = -1;
+
+            for(int i=0;i<str.Length;i++)
+            {
+                if(count[str[i]]==0)
+                {
+                    count[str[i]] = 1;
+                    end_index = i;
+
+                    if((end_index-start_index)+1>res)
+                    {
+                        res = (end_index - start_index)+1;
+                    }
+                }
+                else
+                {
+                    count = new int[256];
+                    start_index = i + 1;
+                    end_index = i + 1;
+                }
+            }
+            Console.WriteLine(res);
         }
     }
 }

@@ -21,14 +21,17 @@ namespace Test.Arrays_Stings
 
         void findsubstring_countNo(string str)
         {
+            //a) Count the number of 1’s.Let the count of 1’s be m.
+            //b) Return m(m-1)/ 2
+            //The idea is to count total number of possible pairs of 1’s.
             int m = 0;
-            for(int i=0;i<str.Length;i++)
+            for(int i=0;i<str.Length;i++ )
             {
                 if (str[i] == '1')
                     m++;
             }
 
-            Console.WriteLine((m * (m - 1)) / 2);
+            Console.WriteLine((m * (m - 1)) / 2); 
         }
         void findsubstring_print(string str)
         {
