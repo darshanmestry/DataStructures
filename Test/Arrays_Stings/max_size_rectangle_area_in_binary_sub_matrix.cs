@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Test.Arrays_Stings
 {
-    class max_size_rectangle_in_binary_sub_matrix
+    class max_size_rectangle_area_in_binary_sub_matrix
     {
-        public max_size_rectangle_in_binary_sub_matrix()
+        public max_size_rectangle_area_in_binary_sub_matrix()
         {
             /*
              * Maximum size rectangle binary sub-matrix with all 1s
@@ -23,6 +23,7 @@ namespace Test.Arrays_Stings
                 Output :
 
             Answer is 8
+
                 1 1 1 1
                 1 1 1 1
 
@@ -32,9 +33,33 @@ namespace Test.Arrays_Stings
                 (1, 0) to (2, 3) which is
                 1 1 1 1
                 1 1 1 1 
+
+
+            Approach
+            Input :
+            0 1 1 0
+            1 1 1 1
+            1 1 1 1
+            1 1 0 0
+            Step 1: 
+            0 1 1 0  maximum area  = 2
+            Step 2:
+            row 1  1 2 2 1  area = 4, maximum area becomes 4
+            row 2  2 3 3 2  area = 8, maximum area becomes 8
+            row 3  3 4 0 0  area = 6, maximum area remains 8
+
+            1. Find historam for 0th row and initialy that is the ans
+
+            2. Run loop from 1st row till n-1 row
+
+            3. Add contents of row 0 to row 1. It means value at top of the current cell shud be added with current cell
+                
+                i.e arr[i,j=arr[i,j]+arr[i-1,j]
+
+            4. Calclate the histogram for that row and update ans if it is max
              */
 
-           int[,] arr={
+            int[,] arr={
                 { 0, 1, 1, 0 },
                 { 1, 1, 1, 1 },
                 { 1, 1, 1, 1 },
@@ -50,10 +75,12 @@ namespace Test.Arrays_Stings
             int max_size = int.MinValue;
 
             int size = 0;
+            //get Histogram for 0th row
             size = max_histogram(arr, 0);
 
             max_size = Math.Max(max_size, size);
 
+            //Traverl from 1st row till the end
             for (int i=1;i<arr.GetLength(0);i++)
             {
                 size = 0;

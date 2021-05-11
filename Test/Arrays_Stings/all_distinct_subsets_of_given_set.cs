@@ -37,6 +37,8 @@ namespace Test.Arrays_Stings
                 string temp = "";
                 for (int j=0;j<arr.Length;j++)
                 {
+
+                    // for every bit of i which is not set add the elements to the temp
                     if((i &(1<<j))!=1)
                     {
 
@@ -45,6 +47,28 @@ namespace Test.Arrays_Stings
                     }
 
                     if(!lis.Contains(temp))
+                        lis.Add(temp);
+                }
+            }
+        }
+    
+    
+        void pract(int[] arr)
+        {
+            int pow =(int) Math.Pow(2, arr.Length);
+            List<string> lis = new List<string>();
+            for (int i=0;i<pow;i++)
+            {
+                string temp = "";
+                for(int j=0;j<arr.Length;j++)
+                {
+                    
+                    if((i & (1<<j ))!=1)
+                    {
+                        temp += arr[j] + " ";
+                    }
+
+                    if (!lis.Contains(temp))
                         lis.Add(temp);
                 }
             }

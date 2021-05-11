@@ -38,7 +38,7 @@ Explanation: The 3rd smallest element is 20
                     {32, 33, 39, 50},
                   };
 
-            kth_small(arr,9);
+            kth_small(arr,3);
         }
 
         void kth_small(int[,] arr,int k)

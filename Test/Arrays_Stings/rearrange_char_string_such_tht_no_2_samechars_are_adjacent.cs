@@ -64,8 +64,8 @@ namespace Test.Arrays_Stings
         void rearrange()
         {
             string str = "";
-            int i = 0;
-            int j = 0;
+           // int i = 0;
+            int j = 0;//index of char in MaxHeap with highest frequency
             char prev='#';
             while (freq.Count > 0)
             {

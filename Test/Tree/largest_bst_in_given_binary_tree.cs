@@ -55,7 +55,25 @@ namespace Test.Tree
 
 
             /*
-             /* Let us construct the following Tree  
+           Given a Binary Tree, write a function that returns the size of the largest subtree which is also a Binary Search Tree (BST). If the complete Binary Tree is BST, then return the size of whole tree.
+
+            Examples:
+
+            Input: 
+                  5
+                /  \
+               2    4
+             /  \
+            1    3
+
+            Output: 3 
+            The following subtree is the maximum size BST subtree 
+               2  
+             /  \
+            1    3
+
+
+            Input: 
                    50
                  /    \
               30       60
@@ -63,6 +81,13 @@ namespace Test.Tree
             5   20   45    70
                           /  \
                         65    80
+            Output: 5
+            The following subtree is the maximum size BST subtree 
+                  60
+                 /  \ 
+               45    70
+                    /  \
+                  65    80
   
       
              */
@@ -100,13 +125,13 @@ namespace Test.Tree
             int min = left.min;
             int max = right.max;
             
-
+            //Tree inculuding root is BST when below condition is true
             if(left.isbst && right.isbst && left.max<root.data && right.min>root.data)
             {
                 ret = new info(size, min, max, size, true);
                 return ret;
             }
-
+            //Either left or right subtree of root is BST hence return the subtree(left or right) which has largest size
             ret = new info(size, min, max, Math.Max(left.actual_size,right.actual_size), false);
 
             return ret;

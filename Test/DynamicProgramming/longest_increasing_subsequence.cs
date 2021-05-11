@@ -25,7 +25,8 @@ namespace Test.DynamicProgramming
         public longest_increasing_subsequence()
         {
             int[] arr = { 50, 3, 10, 7, 40, 80 };
-            find_lcs(arr);
+            //find_lcs(arr);
+            practise(arr);
         }
 
         void find_lcs(int[] arr)
@@ -47,6 +48,33 @@ namespace Test.DynamicProgramming
             }
 
             int res = dp[dp.Length - 1];
+        }
+    
+        
+        void practise(int[] arr)
+        {
+            int[] dp = new int[arr.Length];
+
+            for (int i = 0; i < arr.Length; i++)
+                dp[i] = 1;
+
+            for(int i=1;i<arr.Length;i++)
+            {
+                for(int j=0;j<i;j++)
+                {
+                    if(arr[j]<arr[i])
+                    {
+                        dp[i] = Math.Max(dp[i], dp[j] + 1);
+                    }
+                }
+            }
+
+            int res = int.MinValue;
+            for (int i = 0; i < dp.Length; i++)
+            {
+                if (dp[i] > res)
+                    res = dp[i];
+            }
         }
     }
 }

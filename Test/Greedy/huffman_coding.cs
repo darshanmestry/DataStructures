@@ -54,7 +54,7 @@ namespace Test.Greedy
             size++;
 
             int i = size - 1;
-            arr[i] = new huffman(data,'-');
+            arr[i] = new huffman(data,c);
 
             while (i != 0 && arr[getParent(i)].data > arr[i].data)
             {

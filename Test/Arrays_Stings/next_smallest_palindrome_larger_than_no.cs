@@ -25,7 +25,7 @@ namespace Test.Arrays_Stings
         {
             //Case 1: Odd len no
             int[] arr1 = { 2, 3, 5, 4, 5 }; 
-            //next_palindrome(arr1);
+            next_palindrome(arr1);
 
 
             //Case 2: even len no
@@ -41,16 +41,24 @@ namespace Test.Arrays_Stings
 
        void next_palindrome(int[] arr)
        {
+            /*
+             Steps to follow
+            1.
+             */
             bool isOdd = false;
+            //fill all array elements in temp
             int[] temp = new int[arr.Length];
 
             for(int k=0;k<arr.Length;k++)
             {
                 temp[k] = arr[k];
             }
+
+            //calculate mid len
             int mid = arr.Length / 2;
 
             int i, j;
+            
             
             if(arr.Length%2!=0)
             {
@@ -63,6 +71,7 @@ namespace Test.Arrays_Stings
                 j = mid;
             }
 
+
             while(i>=0 && j<arr.Length)
             {
                 if(arr[i]!=arr[j])
@@ -72,6 +81,8 @@ namespace Test.Arrays_Stings
                 i--;
                 j++;
             }
+
+            int no = getNo_alternative(temp);
             if(getno(temp)>=getno(arr))
             {
                 arr[mid]++;
@@ -98,6 +109,18 @@ namespace Test.Arrays_Stings
             }
 
             return no;
+        }
+
+        int getNo_alternative(int[] arr)
+        {
+            int res = 0;
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                res = (res * 10) + arr[i];
+            }
+
+            return res;
         }
     }
 }

@@ -36,5 +36,24 @@ namespace Test.Tree
 
             return val;
         }
+    
+        int practise(Node root)
+        {
+            if (root == null)
+                return 0;
+
+            if (root.left == null && root.right == null)
+                return root.data;
+
+            
+            int leftval = practise(root.left);
+            int rightVal = practise(root.right);
+
+            int minVal = Math.Min(leftval, rightVal);
+
+            ans = Math.Max(root.data - minVal, ans);
+
+            return ans;
+        }
     }
 }

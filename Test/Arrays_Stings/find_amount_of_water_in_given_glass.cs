@@ -30,6 +30,7 @@ namespace Test.Arrays_Stings
 
             int i = 2, j = 2, x = 2;
             findwater(i, j, x);
+            float res=practise(i, j, x);
         }
 
         void findwater(int i,int j,float x)
@@ -65,7 +66,45 @@ namespace Test.Arrays_Stings
                 }
             }
 
+            // The index of jth glass in ith
+            // row will be i*(i-1)/2 + j - 1
             float res = glasses[(int)(i * (i - 1) /2 + j - 1)];
        }
+    
+        float practise(int i,int j,int total_Water)
+        {
+            int total_glasses = (i * i + 1) / 2;
+
+            float[] glasses = new float[total_glasses];
+
+
+            //initially pull all the water in glass 1;
+            int index = 0;
+            glasses[index] = total_Water;
+
+            //1st row will will have 1 col
+            //2nd row will have 2 col
+            //3rd row will have 3 col and so on..
+            for(int row=1;row<i;row++)
+            {
+                for(int col=1;col<=row;col++)
+                {
+                    float water = glasses[index];
+
+                    glasses[index] = water >= 1.0f ? 1.0f : water;
+
+
+                    float remaining_Water = water >= 1.0f ? water - 1.0f : 0.0f;
+
+                    glasses[index + row] = remaining_Water / 2;
+                    glasses[index + row + 1] = remaining_Water / 2;
+
+                    index++;
+                }
+            }
+            //formula to get water_in_ith_row_jth_col (i * i - 1) / (2 + j - 1)
+            float water_in_ith_row_jth_col = glasses[(i * i - 1) / (2 + j - 1)];
+            return water_in_ith_row_jth_col;
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace Test.Arrays_Stings
         public largest_sum_continous_subarray()
         {
             int[] a = { -2, -3, 4, -1, -2, 1, 5, -3 };
+            pract(a);
             largest_sum(a);
         }
 
@@ -35,6 +36,32 @@ namespace Test.Arrays_Stings
             }
 
             int res = max_so_far;
+        }
+   
+        void pract(int[] arr)
+        {
+            int max_so_Far = 0;
+            int max_ending_here = 0;
+
+            int i = 0;
+
+            while(i<arr.Length)
+            {
+                max_ending_here += arr[i];
+
+                if (max_ending_here > max_so_Far)
+                {
+                    max_so_Far = max_ending_here;
+                }
+                else if (max_ending_here < 0)
+                {
+                    max_ending_here = 0;
+                }
+
+                i++;
+            }
+            
+            int res = max_so_Far;
         }
     }
 }

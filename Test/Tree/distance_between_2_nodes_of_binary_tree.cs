@@ -35,7 +35,9 @@ namespace Test.Tree
             root.right.right = new Node(7);
             root.right.left.right = new Node(8);
 
-            distance_between_2_nodes(root, new Node(4), new Node(5));
+            //distance_between_2_nodes(root, new Node(4), new Node(5));
+
+            pract_dist(root, new Node(4), new Node(5));
         }
 
 
@@ -84,6 +86,59 @@ namespace Test.Tree
 
 
 
+        }
+    
+    
+        void pract_dist(Node root,Node n1,Node n2)
+        {
+            int d1 = pract_find_level(root, n1,0);
+            int d2 = pract_find_level(root, n2,0);
+
+            Node lca = pract_lca(root, n1, n2);
+
+            int d3 = pract_find_level(root, lca, 0);
+
+            int res = (d1 + d2) - (2 * d3);
+        }
+
+        int pract_find_level(Node root,Node n1,int dist)
+        {
+            if (root == null)
+                return -1;
+
+            if (root.data == n1.data)
+                return dist;
+
+            int t1=pract_find_level(root.left,n1, dist + 1);
+
+
+            if (t1 == -1)
+                return pract_find_level(root.right, n1, dist + 1);
+            else
+                return t1;
+            
+        }
+
+        Node pract_lca(Node root,Node n1,Node n2)
+        {
+            if (root == null)
+                return null;
+
+
+            if (root.data == n1.data || root.data == n2.data)
+                return root;
+
+
+            Node t1 = pract_lca(root.left, n1, n2);
+            Node t2 = pract_lca(root.right, n1, n2);
+
+            if (t1 != null && t2 != null)
+                return root;
+
+            if (t1 == null)
+                return t2;
+            else
+                return t1;
         }
     }
 }

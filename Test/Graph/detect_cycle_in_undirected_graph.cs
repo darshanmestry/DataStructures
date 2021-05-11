@@ -59,12 +59,18 @@ namespace Test.Graph
 
             for(int i=0;i<itr.Count;i++)
             {
+                // If an adjacent is not visited,
+                // then recur for that adjacent
                 if (!visited[itr.ElementAt(i)])
                 {
                     if (util(g, itr.ElementAt(i), visited, v))
                         return true;
                 }
-                else if (i != parent)
+                // If an adjacent element is already present in the visited list,
+                // Then there can be possibility that it is a parent of Vertex V which is currently being processed.
+                // If it is not a parent of vertex V then it is a cycle.
+                // when  itr.ElementAt(i) == parent .it will be back edge. 0-->1 with parent 0 and and 1->0 with parent 0
+                else if (itr.ElementAt(i) != parent) 
                     return true;
             }
 

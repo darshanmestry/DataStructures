@@ -24,7 +24,9 @@ namespace Test.Arrays_Stings
 
             string str3 = "ABDEFGABEF"; //case 1;
             //longgest_substring(str3);
-            Practise(str3);
+            //Practise(str3);
+
+            pact_2nd_time("GEEKSFORGEEKS");
             string str2 = "BBBB"; //case 2;
             //longgest_substring(str2);
             Practise(str2);
@@ -108,6 +110,37 @@ namespace Test.Arrays_Stings
                 }
             }
             Console.WriteLine(res);
+        }
+   
+        void pact_2nd_time(string str)
+        {
+            int start_index = 0;
+            int end_index = 0;
+
+            int[] count = new int[256];
+            int res = 0; 
+            for(int i=0;i<str.Length;i++)
+            {
+                if(count[str[i]]==0)
+                {
+                    count[str[i]] = 1;
+
+                    end_index = i;
+                    int temp = (end_index - start_index) + 1;
+
+                    if (temp > res)
+                        res = temp;
+
+                }
+                else
+                {
+                    count = new int[256];
+
+                    count[str[i]] = 1;
+                    start_index = i;
+                    end_index = i;
+                }
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Test.DynamicProgramming
          */
         public longest_common_subsequence()
         {
-
+            practise("AGGTAB", "GXTXAYB");
             lcs("AGGTAB", "GXTXAYB");
         }
 
@@ -65,6 +65,34 @@ namespace Test.DynamicProgramming
             int res = dp[rowlen , collen];
         }
 
+        void practise(string str1,string str2)
+        {
+            int[,] dp = new int[str1.Length + 1, str2.Length + 2];
+
+            for (int i = 0; i < str1.Length; i++)
+                dp[i, 0] = 0;
+
+            for (int i = 0; i < str2.Length; i++)
+                dp[0, i] = 0;
+
+
+            for(int i=1;i<=str1.Length;i++)
+            {
+                for(int j=1;j<=str2.Length;j++)
+                {
+                    if(str1[i-1]==str2[j-1])
+                    {
+                        dp[i, j] = dp[i - 1, j - 1] + 1;
+                    }
+                    else
+                    {
+                        dp[i, j] = Math.Max(dp[i, j - 1], dp[i - 1, j]);
+                    }
+                }
+            }
+            int res = dp[str1.Length, str2.Length];
+
+        }
     }
 }
     

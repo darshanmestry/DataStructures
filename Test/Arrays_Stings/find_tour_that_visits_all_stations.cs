@@ -55,21 +55,38 @@ namespace Test.Arrays_Stings
         {
             int start = 0, end = 1;
             int cur = (list.ElementAt(start).petrol - list.ElementAt(start).distance);
-            while(end!=start && cur<0)
-            {
 
-                while(end!=start && cur<0)
+
+            // If current amount of petrol in 
+            // truck becomes less than 0, then
+            // remove the starting petrol pump from tour
+            while (end!=start && cur<0)
+            {
+                // If current amount of petrol in
+                // truck becomes less than 0, then
+                // remove the starting petrol pump from tour
+                while (end!=start && cur<0)
                 {
-                    cur=cur-(list.ElementAt(start).petrol- list.ElementAt(start).distance);
+                    // Remove starting petrol pump.
+                    // Change start
+                    cur = cur-(list.ElementAt(start).petrol- list.ElementAt(start).distance);
+
                     start = (start + 1) % list.Count;
 
-                    if(start==0)
+
+                    // If 0 is being considered as
+                    // start again, then there is no
+                    // possible solution
+                    if (start==0)
                     {
                         return -1;
                     }
                 }
+
+                
                 petrolPump node = list.ElementAt(end);
 
+                // Add a petrol pump to current tour
                 cur += list.ElementAt(end).petrol - list.ElementAt(end).distance;
 
                 end = (end + 1) % list.Count;
@@ -117,6 +134,35 @@ namespace Test.Arrays_Stings
             //    int res = end + 1;
             //}
 
+        }
+    
+        int practise(List<petrolPump> list)
+        {
+            int start = 0, end = 1;
+
+            int cur = list.ElementAt(start).petrol - list.ElementAt(start).distance;
+
+            while(start!=end && cur <0)
+            {
+                while(start!=end && cur<0)
+                {
+                    cur-= list.ElementAt(start).petrol - list.ElementAt(start).distance;
+
+                    start = (start + 1) % list.Count;
+
+                    if (start == 0)
+                        return -1;
+
+                }
+
+                 cur = list.ElementAt(end).petrol - list.ElementAt(end).distance;
+
+                 end = (end + 1) % list.Count;
+
+
+            }
+
+            return start;
         }
     }
 }

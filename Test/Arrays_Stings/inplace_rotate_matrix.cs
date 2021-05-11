@@ -41,17 +41,27 @@ namespace Test.Arrays_Stings
 
             for(int i=0;i<N/2;i++)
             {
+                Console.WriteLine("Iteration 1:");
                 for(int j=i;j<N-1-i;j++)
                 {
                     int temp = arr[i, j];
 
+                   
                     arr[i, j] = arr[j, N -1 - i];
+                    Console.WriteLine("\t[" + i + "," + j + "] = [" + j + ", " + (N - 1 - i) + "]");
 
                     arr[j, N -1 - i] = arr[N -1- i, N -1- j];
 
+                    Console.WriteLine("\t[" + j + ", " + (N - 1 - i) + "] = [" + (N-1-i) + ", " + (N - 1 - j) + "]");
+
+
                     arr[N -1 - i, N -1- j] = arr[N -1 - j, i];
+                    Console.WriteLine("\t[" + (N-1-i) + ", " + (N - 1 - j) + "] = [" + (N - 1 - j) + ", " + i + "]");
+
 
                     arr[N -1 - j, i] = temp;
+
+                    Console.WriteLine("\t[" + (N - 1 - j) + ", " +i + "] = [" + (i) + ", " + j + "]");
                 }  
             }
 

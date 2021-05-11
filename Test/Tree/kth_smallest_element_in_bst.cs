@@ -21,7 +21,7 @@ namespace Test.Tree
             root.left.right.right = new Node(14);
 
             // for k=3 ans is 10
-            int k = 3;
+            int k = 1;
             kthsmallest(root, k);
         }
 
@@ -35,22 +35,26 @@ namespace Test.Tree
             if (root == null)
                 return null; ;
 
-             Node left= inorder(root.left,k);
+            // search in left subtree
+            //Node left = inorder(root.left,k);
 
 
-            if (left != null)
-                return left;
+            inorder(root.left, k);
 
-             count++;
+            // if k'th smallest is found in left subtree, return it
+            // if (left != null)
+            //    return left;
 
+            count++;
 
+            // if current element is k'th smallest, return it
             if (k == count)
             {
                 return root;
             }
 
-
-             return inorder(root.right,k);
+            // else search in right subtree
+            return inorder(root.right,k);
 
         }
     }

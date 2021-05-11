@@ -55,5 +55,32 @@ namespace Test.Tree
 
         }
 
+
+        Node Practise(Test.LinkedList.Node head)
+        {
+            Test.LinkedList.Node cur = head;
+            Queue<Node> q = new Queue<Node>();
+
+            Node root = new Node(cur.data);
+            cur = cur.next;
+            q.Enqueue(root);
+            while(cur!=null)
+            {
+                Node dq = q.Dequeue();
+
+                dq.left = new Node(cur.data);
+                cur = cur.next;
+                q.Enqueue(dq.left);
+
+                if(cur!=null)
+                {
+                    dq.right = new Node(cur.data);
+                    cur = cur.next;
+                    q.Enqueue(dq.right);
+                }
+            }
+
+            return root;
+        }
     }
 }

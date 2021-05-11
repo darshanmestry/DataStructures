@@ -24,7 +24,7 @@ namespace Test
         {
 
 
-            delete_n_nodes_after_m_nodes obj = new delete_n_nodes_after_m_nodes();
+            wildcard_pattern_matching obj = new wildcard_pattern_matching();
 
             Console.WriteLine("done");
             Console.ReadLine();

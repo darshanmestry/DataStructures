@@ -16,6 +16,7 @@ namespace Test.Tree
              8  22
             / \   \
            4   12   
+
              */
 
             Node root = new Node(20);
@@ -26,11 +27,29 @@ namespace Test.Tree
             root.left.left = new Node(4);
             root.left.right = new Node(12);
 
-            find_successor(root, root.left);
+
+            //case 1: when Node to be searched has right child
+            //find_successor(root, root.left);
+
+            //case 2.1: when Node to be searched do not have right child and Node ans is in left subtree
+            //find_successor(root, root.left.left);
+
+            //case 2.2: when Node to be searched do not have right child and Node ans is in right subtree
+            find_successor(root, root.left.right);
         }
 
         void find_successor(Node root,Node node)
         {
+            //Approach
+            /*
+              1. If the node which is given has right subtree then the the minimum value of the right subtree is the inorder successor;
+              2. When node to be searched do not have right child then
+                    2.1 iterate the tree till it becomes null
+                    2.2 compare value of root and node if value of root.data > node.data
+                        then assisgn root as successor; successor=root;
+                    2.3 if value of root < node.data
+                        then simply move to root.right and keep iterating
+             */
             Node successor = null;
             if (node.right!=null)
             {
