@@ -28,7 +28,7 @@ namespace Test.Arrays_Stings
 
             if(start<=end)
             {
-                if (arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1])
+                if ( ( mid==arr.Length-1|| arr[mid] > arr[mid + 1]) && (mid==0||  arr[mid] > arr[mid - 1]))
                 {
                     Console.WriteLine("Peak " + arr[mid]);
                 }

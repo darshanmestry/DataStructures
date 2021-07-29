@@ -38,7 +38,7 @@ namespace Test.Arrays_Stings
 
                 for(int i=j+1;i<no.Length;i++)
                 {
-                    if (no[i] < no[minIndex] && no[i]>x)
+                    if (no[minIndex] > no[i] && no[i]>x)
                         minIndex = i;
                 }
 

@@ -8,7 +8,7 @@ namespace Test.Tree
 {
     public class Node
     {
-        public int data,hd;
+        public int data,hd,height;
         
         public Node left, right, nextRight,random;
 
@@ -16,6 +16,9 @@ namespace Test.Tree
         {
             data = item;
             left = right = nextRight = null;
+            height = 1;
         }
+
+     
     }
 }

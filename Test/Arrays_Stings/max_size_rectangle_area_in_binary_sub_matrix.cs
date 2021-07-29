@@ -59,6 +59,10 @@ namespace Test.Arrays_Stings
             4. Calclate the histogram for that row and update ans if it is max
              */
 
+            //temp[] ={row0} cal histogram
+            //temp[] ={row0+ro1} histogram
+            //temp[] ={row0+ro1+row2} histogram
+            //temp[] ={row0+ro1+row2+row3} histogram
             int[,] arr={
                 { 0, 1, 1, 0 },
                 { 1, 1, 1, 1 },

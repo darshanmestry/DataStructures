@@ -15,7 +15,7 @@ namespace Test.Arrays_Stings
 
         public kth_largest_element_in_array()
         {
-            int[] arr = { 5, 6, 7, 1, 2 };
+            int[] arr = { 1, 23, 12, 9, 30, 2, 50 };
             int l = 3;
             kthLargest(arr, 3);
         }

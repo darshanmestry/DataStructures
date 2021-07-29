@@ -9,7 +9,7 @@ namespace Test.Arrays_Stings
     class length_of_largest_region_in_boolean_matrix_and_no_of_islands
     {
         /*
-         M[][5] = { 0 0 1 1 0
+         M[][5] = {0 0 1 1 0
                    1 0 1 1 0
                    0 1 0 0 0
                    0 0 0 0 1 }

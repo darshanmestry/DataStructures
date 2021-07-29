@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Test.DynamicProgramming
 {
-    //Given n dice each with m faces, numbered from 1 to m, find the number of ways to get sum X. X is the summation of values on each face when all the dice are thrown.
+    //Given n dice each with m faces, numbered from 1 to m, find the number of ways to get sum X. 
+    //X is the summation of values on each face when all the dice are thrown.
     class dice_throw_problem
     {
 
@@ -29,19 +30,20 @@ namespace Test.DynamicProgramming
         {
             int[,] table=new int[no_of_dice + 1, sum + 1];
             
-            for(int i=0;i<=no_of_dice;i++)
-            {
-                for(int j=0;j<=sum;j++)
-                {
-                    table[i, j] = 0;
-                }
-            }
+            //for(int i=0;i<=no_of_dice;i++)
+            //{
+            //    for(int j=0;j<=sum;j++)
+            //    {
+            //        table[i, j] = 0;
+            //    }
+            //}
 
             for(int i=1;i<=sum&& i<=no_of_faces;i++)
             {
                 table[1, i] = 1;
             }
 
+            print(table);
             for(int i=2;i<=no_of_dice;i++)
             {
                 for(int j=1;j<=sum;j++)
@@ -67,7 +69,17 @@ namespace Test.DynamicProgramming
             return table[no_of_dice, sum];
         }
 
-
+        void print(int[,] arr)
+        {
+            for(int i=0;i<arr.GetLength(0);i++)
+            {
+                for(int j=0;j<arr.GetLength(1);j++)
+                {
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
         int findWays(int m,
                     int n, int x)
         {

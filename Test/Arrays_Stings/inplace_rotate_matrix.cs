@@ -48,6 +48,7 @@ namespace Test.Arrays_Stings
 
                    
                     arr[i, j] = arr[j, N -1 - i];
+
                     Console.WriteLine("\t[" + i + "," + j + "] = [" + j + ", " + (N - 1 - i) + "]");
 
                     arr[j, N -1 - i] = arr[N -1- i, N -1- j];
@@ -62,10 +63,11 @@ namespace Test.Arrays_Stings
                     arr[N -1 - j, i] = temp;
 
                     Console.WriteLine("\t[" + (N - 1 - j) + ", " +i + "] = [" + (i) + ", " + j + "]");
-                }  
+                }
+                print(arr, N);
             }
 
-            print(arr, N);
+           // print(arr, N);
 
         }
 

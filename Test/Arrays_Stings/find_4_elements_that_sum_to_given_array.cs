@@ -12,7 +12,9 @@ namespace Test.Arrays_Stings
         {
             int[] arr = { 10, 2, 3, 4, 5, 9, 7, 8 };
             int sum = 23;
-            four_elements_are(arr, sum);
+            //four_elements_are(arr, sum);
+
+            OptimizedSolution(arr, sum);
         }
 
 
@@ -49,6 +51,49 @@ namespace Test.Arrays_Stings
         }
     
         
+        // n2Logn Solution
+        void OptimizedSolution(int[] arr,int sum)
+        {
+            List<sumPair> list = new List<sumPair>();
 
+            for(int i=0;i<arr.Length-1;i++)
+            {
+                for(int j=i+1;j<arr.Length;j++)
+                {
+                    int tempSum = arr[i] + arr[j];
+                    list.Add(new sumPair(tempSum, arr[i], arr[j]));
+                }
+            }
+
+            list = list.OrderBy(x => x.sum).ToList();
+
+            int startIndex = 0;
+            int endIndex = list.Count - 1;
+
+            while(startIndex<=endIndex)
+            {
+                int tempSum = list.ElementAt(startIndex).sum + list.ElementAt(endIndex).sum;
+                if (tempSum == sum)
+                {
+                    Console.WriteLine(list.ElementAt(startIndex).i + " " + list.ElementAt(startIndex).j + " " + list.ElementAt(endIndex).i + " " + list.ElementAt(endIndex).j);
+                    break;
+                }
+                else if (tempSum < sum)
+                    startIndex++;
+                else
+                    endIndex--;
+            }
+        }
+    }
+
+    class sumPair
+    {
+        public int i, j, sum;
+        public sumPair(int sum,int firstElement,int secondElement)
+        {
+            this.sum = sum;
+            this.i = firstElement;
+            this.j = secondElement;
+        }
     }
 }

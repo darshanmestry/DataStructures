@@ -40,7 +40,7 @@ namespace Test.LinkedList
         {
             Node cur = head;
              
-            if(data<cur.data)// case1
+            if(data<cur.data)// case1 New node is to be inserted just before the head node:     
             {
                 while(cur.next!=head)
                 {
@@ -53,7 +53,7 @@ namespace Test.LinkedList
                 newnode.next = head;
                 head = newnode;
             }
-            else //case 2
+            else //case 2 New node is to be  inserted somewhere after the head: 
             {
                 while(cur.next.data<data && cur.next!=head)
                 {

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Test.Arrays_Stings
 {
     /*
-     * Given the arrival and departure times of all trains that reach a railway station, the task is to find the minimum number of platforms required for the railway station so that no train waits. 
+     * Given the arrival and departure times of all trains that reach a railway station, the task is to
+     * find the minimum number of platforms required for the railway station so that no train waits. 
         We are given two arrays that represent the arrival and departure times of trains that stop.
 
         Examples: 

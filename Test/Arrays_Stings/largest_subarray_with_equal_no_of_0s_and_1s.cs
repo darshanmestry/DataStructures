@@ -63,7 +63,8 @@ Output: 0 to 3 Or 1 to 4
                     found = true;
                 }
 
-                //To get end index last first occurenence of the 1 in leftsum
+                //To get end index last first occurenence of the 1 in leftsum 
+                //Leftsum[i]=0 gives us start index and once we find this look for leftsum[i]=1 as this will give us endinex
                 if (found && leftsum[i] - 1 == start_value) //Condition for end index
                     end_index = i;
             }

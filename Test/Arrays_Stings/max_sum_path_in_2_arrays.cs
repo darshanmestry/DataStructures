@@ -105,6 +105,7 @@ namespace Test.Arrays_Stings
             Console.WriteLine(res);
         }
    
+        //corect an easy solution
         void practise(int[] arr1,int[] arr2)
         {
             int res = 0;

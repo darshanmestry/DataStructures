@@ -32,7 +32,9 @@ namespace Test.Graph
 
             Stack<int> st = new Stack<int>();
             bool[] visited = new bool[6];
-
+             //0-5
+             // vist[0] =0th node
+             //vist[1]=1st node
             for(int i=0;i<v;i++)
             {
                 if(!visited[i])
@@ -56,8 +58,8 @@ namespace Test.Graph
 
             for (int i = 0; i < lis.Count; i++)
             {
-                if(!visited[i])
-                    topo_util(g, st, visited, i);
+                if(!visited[lis.ElementAt(i)])
+                    topo_util(g, st, visited, lis.ElementAt(i));
              }
 
 

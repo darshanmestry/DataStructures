@@ -31,8 +31,10 @@ namespace Test.DynamicProgramming
 
 
 
-            string str = "1234";
-            countSequence(str);
+            //string str = "1234";
+            
+            countSequence("121");
+            countSequence("1234");
         }
 
         /*
@@ -44,13 +46,13 @@ namespace Test.DynamicProgramming
         void countSequence(string str)
         {
             int n = str.Length;
-            int[] count = new int[n];
+            int[] count = new int[n+1];
 
             count[0] = 1;
             count[1] = 1;
 
             
-            for (int i=2;i<n;i++)
+            for (int i=2;i<=n;i++)
             {
                 //// If the last digit is not 0,
                 // then last digit must add to the number of words
@@ -68,7 +70,7 @@ namespace Test.DynamicProgramming
                     count[i] += count[i - 2];
                 }
             }
-            Console.WriteLine(count[n-1]);
+            Console.WriteLine(count[n]);
             }
         }
     }

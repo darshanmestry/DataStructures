@@ -29,7 +29,7 @@ namespace Test.Arrays_Stings
             int[] arr = { 2, 0, 2 };
             //waterUnit(arr);
 
-            int[] arr1 = { 3, 0, 0, 2, 0, 4 };
+            int[] arr1 = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
             waterUnit(arr1);
         }
 
@@ -37,7 +37,7 @@ namespace Test.Arrays_Stings
         {
             int sum = 0;
 
-            int leftmax = 0, rightmax = 0;
+            int leftmax = int.MinValue, rightmax = int.MinValue;
 
             int left_index = 0, right_index = arr.Length - 1;
 

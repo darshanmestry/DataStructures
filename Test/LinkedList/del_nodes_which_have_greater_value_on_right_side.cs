@@ -37,7 +37,7 @@ namespace Test.LinkedList
         }
 
         /*
-         1. Reverse the list. 
+         1.Reverse the list. 
         2. Traverse the reversed list. Keep max till now. If next node is less than max, then delete the next node, otherwise max = next node. 
         3. Reverse the list again to retain the original order. 
          */

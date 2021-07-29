@@ -22,13 +22,13 @@ namespace Test.BackTracking
 
             Following is an example maze.
             input
-             {1, 0, 0, 0}
+                {1, 0, 0, 0}
                 {1, 1, 0, 1}
                 {0, 1, 0, 0}
                 {1, 1, 1, 1}
 
             output
-             {1, 0, 0, 0}
+                {1, 0, 0, 0}
                 {1, 1, 0, 0}
                 {0, 1, 0, 0}
                 {0, 1, 1, 1}

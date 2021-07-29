@@ -25,8 +25,8 @@ namespace Test.DynamicProgramming
 
              */
 
-            //int[] arr = { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
-            int[] arr = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            int[] arr = { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
+            //int[] arr = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
             solve(arr);
 
         }

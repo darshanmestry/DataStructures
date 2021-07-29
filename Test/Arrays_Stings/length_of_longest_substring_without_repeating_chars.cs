@@ -35,6 +35,33 @@ namespace Test.Arrays_Stings
             //longgest_substring(str);
         }
 
+        //optimized solution
+        public int lengthOfLongestSubstring(string s)
+        {
+            int[] chars = new int[128];
+
+            int left = 0;
+            int right = 0;
+
+            int res = 0;
+            while (right < s.Length)
+            {
+               
+                chars[s[right]]++;
+
+                while (chars[s[right]] > 1)
+                {
+                   
+                    chars[s[left]]--;
+                    left++;
+                }
+
+                res = Math.Max(res, right - left + 1);
+
+                right++;
+            }
+            return res;
+        }
         void longgest_substring(string str)
         {
             int[] count = new int[256];

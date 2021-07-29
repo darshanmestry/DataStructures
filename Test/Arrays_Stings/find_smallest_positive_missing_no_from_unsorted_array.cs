@@ -29,8 +29,8 @@ namespace Test.Arrays_Stings
     {
         public find_smallest_positive_missing_no_from_unsorted_array()
         {
-            int[] arr = { 0, 10, 2, -10, -20 };
-            //int[] arr = { 2, 3, -7, 6, 8, 1, -10, 15 };
+            //int[] arr = { 0, 10, 2, -10, -20 };
+            int[] arr = { 2, 3, -7, 6, 8, 1, -10, 15 };
             //int[] arr = { 1, 1, 0, -1, -2 };
             int res=printSmallestMissing(arr);
         }

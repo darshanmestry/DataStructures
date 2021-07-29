@@ -60,7 +60,7 @@ namespace Test.Tree
         {
             // If there is one element in array,store it in current node of segment tree and return
 
-            if (start_index == end_index)
+            if (start_index == end_index)//this will be for leave node
             {
                 st[current_index] = arr[start_index];
                 return;
@@ -72,7 +72,7 @@ namespace Test.Tree
             constructSegmentTree(arr, start_index, mid, current_index * 2 + 1);
             constructSegmentTree(arr, mid + 1, end_index, current_index * 2 + 2);
 
-            st[current_index] = st[current_index*2+1]+ st[current_index * 2 + 2];
+            st[current_index] = st[current_index*2+1]+ st[current_index * 2 + 2]; //this will be for nonleaf node
 
            // return st[current_index];
         }

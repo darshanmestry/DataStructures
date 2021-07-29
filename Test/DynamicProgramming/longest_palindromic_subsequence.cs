@@ -55,25 +55,26 @@ namespace Test.DynamicProgramming
     
         void practise(string str)
         {
-            int rowlen = str.Length;
-            int collen = str.Length;
+            int n = str.Length;
+            int[,] dp = new int[n, n];
 
-            int[,] dp = new int[rowlen, collen];
-
-
-            for (int i = 0; i < str.Length; i++)
+            for (int i = 0; i < n; i++)
                 dp[i, i] = 1;
 
-            for(int col=1; col < str.Length; col++)
+            for(int j=1;j<n;j++)
             {
-                for(int row=0;row<str.Length-col;row++)
+                for(int i=0;i<n-j;i++)
                 {
-                    int j = row + col;
-                    if (str[j] != str[row])
-                        dp[col, row] = Math.Max(dp[col, row - 1], dp[col + 1, row]);
+                    int row = i;
+                    int col = row + j;
+
+                    if(str[row]==str[col])
+                    {
+                        dp[row, col] = dp[row - 1, col - 1] + 2;
+                    }
                     else
                     {
-                        dp[col, row] = 2 + dp[row + 1, j - 1];
+                        dp[row, col] = Math.Max(dp[row, col - 1], dp[row + 1, col]);
                     }
                 }
             }

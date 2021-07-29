@@ -46,6 +46,12 @@ namespace Test.Arrays_Stings
                 Console.WriteLine("Not present");
         }
 
+        /*
+         * 
+         * 1. Keep i at 0th index
+         * 2. Keep incrementing j till we find str[j]==str[i]; i.e we find element on jth index which is equal to element at ith index
+         * 3. if str[i]==str[j] then set arr[j]=i+1(as we set i=0 hence doing i+1);
+         */
         int[] findPrefix(string str)
         {
             int[] arr = new int[str.Length];

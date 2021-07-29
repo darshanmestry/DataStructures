@@ -99,7 +99,8 @@ namespace Test.Arrays_Stings
 
             res=[3,4] ==89
                 res - [Ti-1,Rj]  i.e  refer to one row above where sub matrix start[(1,2) as matrix start at (2,2) ]  and refer to its end value [1,4]
-                res - [Ri,Tj-1]  i.e. refer to end row where matix end and in this refer to value just before index from where values are included in this e.g. refer to (3,1) as values (3,2),(3,3)(3,4) are included in result
+                res - [Ri,Tj-1]  i.e. refer to end row where matix end and in this refer to value just before index from 
+                                      where values are included in this e.g. refer to (3,1) as values (3,2),(3,3)(3,4) are included in result
                 
                 res + [Ti-1,Tj-1]
              */

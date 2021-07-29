@@ -24,7 +24,9 @@ namespace Test.Tree
                   30      70       --------->    40     70 
                     \    /  \                          /  \ 
                     40  60   80                       60   80
-        3) Node to be deleted has two children: Find inorder successor of the node. Copy contents of the inorder successor to the node and delete the inorder successor. Note that inorder predecessor can also be used.
+        3) Node to be deleted has two children: 
+            Find inorder successor of the node. Copy contents of the inorder successor to the node and delete 
+            the inorder successor. Note that inorder predecessor can also be used.
 
 
 

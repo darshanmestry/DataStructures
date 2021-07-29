@@ -23,7 +23,7 @@ b) Find the most optimal way to reach a given number x,
     {
         public minimun_steps_to_reach_Destination()
         {
-            int dest = 11;
+            int dest = 5;
 
             int source = 0;
             int inital_step = 0;

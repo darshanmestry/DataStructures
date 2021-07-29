@@ -36,10 +36,15 @@ All oranges cannot be rotten.
     {
         public min_time_to_rot_all_oranges()
         {
-            int[,] arr={ {2, 1, 0, 2, 1},
-                     {1, 0, 1, 2, 1},
-                     {1, 0, 0, 2, 1}};
+            //Can rot all
+            //int[,] arr ={ {2, 1, 0, 2, 1},
+            //         {1, 0, 1, 2, 1},
+            //         {1, 0, 0, 2, 1}};
 
+            //canot rot all
+            int[,] arr ={ {2, 1, 0, 2, 1},
+                     {0, 0, 1, 2, 1},
+                     {1, 0, 0, 2, 1}};
             rot_oranges(arr);
         }
 

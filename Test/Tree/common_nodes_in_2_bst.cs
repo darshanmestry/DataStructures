@@ -48,7 +48,7 @@ namespace Test.Tree
             commonNoes(root1, root2);
 
 
-
+            //Another approach is to to iterative taverasal of both trees  and use stack 
         }
         void commonNoes(Node root1, Node root2)
         {

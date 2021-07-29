@@ -49,6 +49,7 @@ namespace Test.Arrays_Stings
 
             for(int row=1;row<=i;row++)
             {
+                // we are iterating coll till row as in 1st row there will be 1 col,in 2nd row there will be 2 cols, in 3rd row there will be 3 cols and so on..
                 for(int col=1;col<=row;col++)
                 {
 

@@ -14,16 +14,31 @@ namespace Test.Arrays_Stings
         }
 
         void printneartest(int[] arr)
-        {
-            Stack<int> st = new Stack<int>();
+        {// Create an empty stack
+            Stack<int> S = new Stack<int>();
 
-            for(int i=0;i<arr.Length;i++)
+            // Traverse all array elements
+            for (int i = 0; i < arr.Length; i++)
             {
+                // Keep removing top element from S while the top
+                // element is greater than or equal to arr[i]
+                while (S.Count != 0 && S.Peek() >= arr[i])
+                {
+                    S.Pop();
+                }
 
-                if (st.Count == 0)
-                    Console.Write("_,");
+                // If all elements in S were greater than arr[i]
+                if (S.Count == 0)
+                {
+                    Console.Write("_, ");
+                }
+                else //Else print the nearest smaller element
+                {
+                    Console.Write(S.Peek() + ", ");
+                }
 
-                st.Push(arr[i]);
+                // Push this element
+                S.Push(arr[i]);
             }
         }
     }

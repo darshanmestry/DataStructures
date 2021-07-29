@@ -13,15 +13,26 @@ namespace Test.Tree
 
         public check_if_binary_tress_is_sum_tree()
         {
-           root = new Node(26);
+            /*
+                  26
+                /   \
+              10     3
+            /    \     \
+          4      6      3
+             */
+            root = new Node(26);
            root.left = new Node(10);
            root.right = new Node(3);
-           root.left.left = new Node(4);
+           root.left.left = new Node(14);
            root.left.right = new Node(6);
            root.right.right = new Node(3);
 
 
-            Console.WriteLine(is_sumTree(root));
+            //Console.WriteLine(is_sumTree(root));
+            //isSumTreeOptimized is optimized and simple solution
+            int res = isSumTreeOptimized(root);
+            if (res == -1)
+                Console.WriteLine("Not sumTree");
         }
         bool is_sumTree(Node root)
         {
@@ -54,6 +65,25 @@ namespace Test.Tree
     
     
     
+        // if res=-1 then not sumTree else sumTree
+        int isSumTreeOptimized(Node root)
+        {
+            if (root == null)
+                return 0;
+
+            if (root.left == null && root.right == null)
+                return root.data;
+
+            int left = isSumTreeOptimized(root.left);
+            int right = isSumTreeOptimized(root.right);
+
+            if (root.data == (left + right))
+                return root.data+left+right;
+            else
+                return -1;
+
+            
+        }
       
     }
 }

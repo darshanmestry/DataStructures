@@ -41,19 +41,19 @@ namespace Test.Tree
 
         }
 
-        void util(Node root,int cur,int expected)
+        void util(Node root,int curLen,int expected)
         {
             if (root == null)
                 return;
 
             if (root.data == expected)
-                cur++;
+                curLen++;
             else
-                cur = 1;
+                curLen = 1;
 
-            max_len = Math.Max(max_len, cur);
-            util(root.left, cur, root.data + 1);
-            util(root.right, cur, root.data + 1);
+            max_len = Math.Max(max_len, curLen);
+            util(root.left, curLen, root.data + 1);
+            util(root.right, curLen, root.data + 1);
         }
     }
 }

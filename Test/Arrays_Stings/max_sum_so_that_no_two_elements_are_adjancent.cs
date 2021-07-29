@@ -28,7 +28,7 @@ namespace Test.Arrays_Stings
         {
             int[] arr = new int[]{5, 5, 10,
                               100, 10, 5};
-
+            
             //maxSum(arr);
             max_sum_practise(arr);
             //practise_latest(arr);
@@ -113,7 +113,5 @@ namespace Test.Arrays_Stings
             Console.WriteLine(sum);
         }
    
-        
-    
     }
 }

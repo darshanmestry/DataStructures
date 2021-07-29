@@ -19,27 +19,42 @@ namespace Test.Arrays_Stings
     {
         public print_all_possible_strings_that_can_be_made_by_placing_spaces()
         {
-            print("ABC");
+            print("2101");
             //print_2nd_time_practise("ABC");
         }
 
         void print(string str)
         {
             uint powersetSize = (uint)Math.Pow(2, str.Length-1);
-
+            int cnt = 0;
             for(int counter=0;counter<powersetSize;counter++)
             {
+                string temp = "";
+                bool flag = true;
                 for(int i=0;i<str.Length;i++)
                 {
+                    temp += str[i].ToString();
                     Console.Write(str[i]);
                     if((counter &(1<<i)) >0) // if counter &  (i>>1 ) has set bit then space
                     {
+                        temp = "";
+                        continue;
+
                         Console.Write(" ");
                     }
+
+                    if (int.Parse(temp) > 26)
+                    {
+                        flag = false;
+                    }
+
                 }
+                if (flag)
+                    cnt++;
                 Console.WriteLine(" ");
             }
-            
+
+            Console.WriteLine("CNT:"+cnt);
 
         }
 
@@ -56,10 +71,9 @@ namespace Test.Arrays_Stings
                     if((i &(1<<j))>0)
                     {
                         Console.Write(" ");
-                    }
-
-                    Console.WriteLine(" ");
+                    }           
                 }
+                Console.WriteLine(" ");
             }
         }
     }

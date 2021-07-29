@@ -11,10 +11,12 @@ namespace Test.BackTracking
         public hamiltion_cycle()
         {
             /*
-             * A 2D array graph[V][V] where V is the number of vertices in graph and graph[V][V] is adjacency matrix representation of the graph. A value graph[i][j] is 1 if there is a direct edge from i to j, otherwise graph[i][j] is 0.
+             * A 2D array graph[V][V] where V is the number of vertices in graph and graph[V][V] is adjacency matrix representation of the graph. 
+             * A value graph[i][j] is 1 if there is a direct edge from i to j, otherwise graph[i][j] is 0.
 
                 Output:
-                An array path[V] that should contain the Hamiltonian Path. path[i] should represent the ith vertex in the Hamiltonian Path. The code should also return false if there is no Hamiltonian Cycle in the graph.
+                An array path[V] that should contain the Hamiltonian Path. path[i] should represent the ith vertex in the Hamiltonian Path. 
+               The code should also return false if there is no Hamiltonian Cycle in the graph.
 
 
 

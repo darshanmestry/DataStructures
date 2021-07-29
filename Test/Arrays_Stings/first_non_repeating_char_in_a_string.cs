@@ -9,7 +9,8 @@ namespace Test.Arrays_Stings
     class first_non_repeating_char_in_a_string
     {
         /*
-         Given a string, find the first non-repeating character in it. For example, if the input string is “GeeksforGeeks”, then the output should be ‘f’ and if the input string is “GeeksQuiz”, then the output should be ‘G’. 
+         Given a string, find the first non-repeating character in it. For example, if the input string is “GeeksforGeeks”,
+        then the output should be ‘f’ and if the input string is “GeeksQuiz”, then the output should be ‘G’. 
          */
         public first_non_repeating_char_in_a_string()
         {

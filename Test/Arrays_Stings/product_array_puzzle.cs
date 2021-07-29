@@ -48,5 +48,20 @@ namespace Test.Arrays_Stings
             }
 
         }
+    
+        void optimzed_solution(int[] arr)
+        {
+            int all_elements_product = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+                all_elements_product *= arr[i];
+
+            int[] prod = new int[arr.Length];
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                prod[i] = all_elements_product / arr[i];
+            }
+
+        }
     }
 }

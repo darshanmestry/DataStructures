@@ -32,6 +32,44 @@ namespace Test.DynamicProgramming
             knapsac_problem(wt, val, W);
         }
 
+        //Corect solution
+        void solution(int[] wt,int[]val,int W)
+        {
+
+            //W is Bag and we have to fill weights from wt[] till bag is full
+            int[,] dp = new int[wt.Length + 1, W + 1];
+
+
+            for(int i=0;i<=wt.Length;i++)
+            {
+                for(int w=0;w<=W;w++)
+                {
+                    if (i == 0 || w == 0)
+                    {
+                        dp[i, w] = 0;
+                        continue;
+                    }
+
+
+                    if(w<wt[i])
+                    {
+                        dp[i, w] = dp[i - 1, w];
+                    }
+                    else
+                    {
+                        int firstval = dp[i - 1, w];
+
+                        //val[i] gives current val as we include current wt[i], and dp[i - 1, w - wt[i]] gives whatever remains after including current weight
+                        // doing wt[i-1] as we are strong from [1,1] bt wt[] array starts from 0 index
+                        int secondval = dp[i - 1, w - wt[i-1]] + val[i-1];
+                        dp[i, w] = Math.Max(firstval,secondval);
+                    }
+
+                }
+            }
+        }
+
+        // Disregard this solution
         void knapsac_problem(int[] wt,int[] val,int W)
         {
             int rowLen = wt.Length;
@@ -59,6 +97,7 @@ namespace Test.DynamicProgramming
         }
    
     
+        // Disregard this solution
         void Practise(int[] wt,int[] val,int W)
         {
             int rowLen = wt.Length;

@@ -26,7 +26,7 @@ namespace Test.LinkedList
             than the previous element.
              */
 
-            int k = 3; // Number of linked lists
+            int k = 4; // Number of linked lists
                        //int n = 4; // Number of elements in each list
 
             // An array of pointers storing the head nodes
@@ -47,6 +47,13 @@ namespace Test.LinkedList
             arr[2].next = new Node(9);
             arr[2].next.next = new Node(10);
             arr[2].next.next.next = new Node(11);
+
+
+            arr[3] = new Node(80);
+            arr[3].next = new Node(89);
+            arr[3].next.next = new Node(810);
+            arr[3].next.next.next = new Node(111);
+
 
             //Node res0 = Practise_merge_k_list(arr, k - 1);
             //print(res0);

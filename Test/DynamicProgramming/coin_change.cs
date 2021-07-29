@@ -20,14 +20,48 @@ namespace Test.DynamicProgramming
             int[] coin = { 25, 10, 5 };
             int total = 30;
 
-            coin_change_dp(coin, total);
+            //coin_change_dp(coin, total);
 
             int[] coins1 = { 1, 5, 6, 8 };
             int total1 = 11;
+            int res=findMinCoinOptimizedEasySol(coin, total);
             //coin_change_dp(coins1, total1);
-            practise(coin, total);
+            //practise(coin, total);
         }
 
+        int findMinCoinOptimizedEasySol(int[] arr,int total)
+        {
+            int[] dp = new int[total + 1];
+
+
+
+            // Base case (If given
+            // value total is 0)
+            dp[0] = 0;
+
+
+            for (int i = 1; i <= total; i++)
+                dp[i] = int.MaxValue;
+
+            for(int i=1;i<=total;i++) //traverse total
+            {
+                for(int j=0;j<arr.Length;j++)  //traverse input array
+                {
+                    if(i>=arr[j])  //total>=arr[J]
+                    {
+                        int sub_Res = dp[i - arr[j]];
+
+                        if(sub_Res!=int.MaxValue && sub_Res<dp[i])
+                        {
+                            dp[i] = sub_Res+1;
+                        }
+                    }
+                }
+            }
+            return dp[total];
+
+
+        }
         void coin_change_dp(int[] arr,int total)
         {
             int n = arr.Length;

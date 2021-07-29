@@ -30,7 +30,7 @@ namespace Test.Arrays_Stings
 
             //Case 2: even len no
             int[] arr2 = { 1, 2, 3, 4 };
-            //next_palindrome(arr2);
+            next_palindrome(arr2);
 
             //Case 3: already palindrome
             int[] arr3 = { 1, 2, 2, 1 };

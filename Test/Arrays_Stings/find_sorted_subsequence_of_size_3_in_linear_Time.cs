@@ -15,7 +15,8 @@ namespace Test.Arrays_Stings
             appear in the same sequence in the array 
 
         ALGORITHM
-        Create an auxiliary array smaller[0..n-1]. smaller[i] stores the index of a number which is smaller than arr[i] and is on left side. The array contains -1 if there is no such element.
+        Create an auxiliary array smaller[0..n-1]. smaller[i] stores the index of a number which is smaller than arr[i] and is on left side. 
+        The array contains -1 if there is no such element.
 Create another auxiliary array greater[0..n-1]. greater[i] stores the index of a number which is greater than arr[i] and is on right side of arr[i]. The array contains -1 if there is no such element.
 Finally traverse both smaller[] and greater[] and find the index [i] for which both smaller[i] and greater[i] are not equal to -1.
          */
@@ -24,8 +25,9 @@ Finally traverse both smaller[] and greater[] and find the index [i] for which b
         {
             int[] arr = { 12, 11, 10, 5, 6, 2, 30 };
             int[] arr2 = { 4, 3, 2, 1 };
-            sorted_subsequnce(arr);
-            Optimized_solution(arr2);
+            //sorted_subsequnce(arr);
+           
+            Optimized_solution(arr);
         }
 
         void sorted_subsequnce(int[] arr)
@@ -123,6 +125,6 @@ Finally traverse both smaller[] and greater[] and find the index [i] for which b
             Console.WriteLine("No triplets found");
         }
 
-
+       
     }
 }

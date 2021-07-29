@@ -10,7 +10,8 @@ namespace Test.DynamicProgramming
     {
         /*
          The following is a description of the instance of this famous puzzle involving n=2 eggs and a building with k=36 floors.
-            Suppose that we wish to know which stories in a 36-story building are safe to drop eggs from, and which will cause the eggs to break on landing. We make a few assumptions:
+            Suppose that we wish to know which stories in a 36-story building are safe to drop eggs from, and which will cause the eggs to break on landing. 
+            We make a few assumptions:
             …..An egg that survives a fall can be used again. 
             …..A broken egg must be discarded. 
             …..The effect of a fall is the same for all eggs. 
@@ -73,7 +74,7 @@ namespace Test.DynamicProgramming
             int[,] dp = new int[no_of_eggs + 1, no_of_floors + 1];
             int res;
 
-            // We need one trial for one floor and0
+            // We need one trial for one floor and 0
             // trials for 0 floors
             for (int i = 1; i <= no_of_eggs; i++)
             {
@@ -98,9 +99,13 @@ namespace Test.DynamicProgramming
                         case 1: Egg breaks on [2,2] 
                                 Therefore check the result of 1 remaining egg on one floor below i.e [1,1]
                         case 2: eggs do not break on [2,2]. 
-                                Therefore check the result of [2,0]. We can get these values as [i(egg;which is 2 here), j(floor;which is 2) - x( will be 1 in 1st itr and will be 2 in 2nd itr)
+                                Therefore check the result of [2,0]. We can get these values as 
+                                [i(egg;which is 2 here), j(floor;which is 2) - x( will be 1 in 1st itr and will be 2 in 2nd itr)
+
+                                for case two we get the upper half of the floor For more explanation watch below link 3:10 mins till 4:10 
+                                https://www.youtube.com/watch?v=KVfxgpI3Tv0
                                 
-                     */
+                    */
                     for (int x = 1; x <= j; x++)
                     {
                         res = 1 + Math.Max(dp[i - 1, x - 1],

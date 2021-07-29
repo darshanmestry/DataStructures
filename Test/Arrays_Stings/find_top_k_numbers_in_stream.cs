@@ -36,7 +36,7 @@ namespace Test.Arrays_Stings
         void print_stream_implement(int[] arr,int k)
         {
             int[] top = new int[k + 1];
-
+           
             Dictionary<int, int> dict = new Dictionary<int, int>();
 
             for (int i = 0; i <= k + 1; i++)

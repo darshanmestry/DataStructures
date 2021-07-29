@@ -78,8 +78,8 @@ namespace Test.Tree
             }
            
 
-            root.left = extractLeaves(root.left); ;
             root.right = extractLeaves(root.right); ;
+            root.left = extractLeaves(root.left); ;
 
             return root;
 

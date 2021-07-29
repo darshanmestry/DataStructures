@@ -10,15 +10,15 @@ namespace Test.Arrays_Stings
     {
         public square_root_of_an_integer()
         {
-            int no = 9;
+            int no = 11;
             sqroot(9);
         }
 
-        void sqroot(int no)
+        int sqroot(int no)
         {
 
             int strt = 1, end = no;
-            int ans;
+            int ans=-1;
             while(strt<=end)
             {
                 int mid = (strt+end) / 2;
@@ -26,7 +26,7 @@ namespace Test.Arrays_Stings
                 if (mid * mid == no)
                 {
                     Console.WriteLine(mid);
-                    return;
+                    return mid;
                 }
 
                 else if (mid * mid > no)
@@ -41,7 +41,7 @@ namespace Test.Arrays_Stings
                 }
             }
 
-
+            return ans;
 
 
         }

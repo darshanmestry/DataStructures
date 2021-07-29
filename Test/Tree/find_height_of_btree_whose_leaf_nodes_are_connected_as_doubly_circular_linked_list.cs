@@ -10,6 +10,15 @@ namespace Test.Tree
     {
         public find_height_of_btree_whose_leaf_nodes_are_connected_as_doubly_circular_linked_list()
         {
+            /*
+                      1 
+                   /   \ 
+                  2      3 
+                /  \ 
+               4    5
+              /   
+             6 
+             */
             Node root = new Node(1);
 
             root.left = new Node(2);

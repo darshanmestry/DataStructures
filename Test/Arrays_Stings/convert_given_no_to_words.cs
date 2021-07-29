@@ -10,14 +10,14 @@ namespace Test.Arrays_Stings
     {
         public convert_given_no_to_words()
         {
-
+            converPractise(1234);
             converPractise(1);
             converPractise(10);
             converPractise(20);
             converPractise(21);
 
             converPractise(111);
-            converPractise(1234);
+          
             converPractise(9923);
 
            

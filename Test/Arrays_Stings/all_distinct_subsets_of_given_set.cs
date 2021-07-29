@@ -46,9 +46,10 @@ namespace Test.Arrays_Stings
 
                     }
 
-                    if(!lis.Contains(temp))
+                    if (!lis.Contains(temp))
                         lis.Add(temp);
                 }
+               
             }
         }
     
