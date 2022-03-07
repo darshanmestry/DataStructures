@@ -48,6 +48,28 @@ namespace Test.Tree
             root.right.right = new Node(12);
             root.right.left = new Node(7);
 
+
+            Node root1 = new Node(1);
+            root1.left = new Node(3);
+            root1.left.right = new Node(2);
+            /*
+             * Input
+             *      1
+             *     /
+             *    3
+             *     \
+             *       2
+             *       
+             *Output
+             *      
+             *      3
+             *     /
+             *    1
+             *     \
+             *      2
+             */
+            correctBst(root1);
+
             correctBst(root);
         }
 

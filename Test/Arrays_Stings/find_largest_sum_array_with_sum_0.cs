@@ -30,10 +30,10 @@ namespace Test.Arrays_Stings
         public find_largest_sum_array_with_sum_0()
         {
             int[] arr= { 15, -2, 2, -8, 1, 7, 10, 23 };
-            large_sum_array(arr);
+            //large_sum_array(arr);
 
-            //int[] arr2 = { 1, 2, 3 };
-            //large_sum_array(arr2);
+            int[] arr2 = { 1, 2, 3 };
+            large_sum_array(arr2);
 
             //int[] arr3 = { 1, 0, 3 };
             //large_sum_array(arr3);

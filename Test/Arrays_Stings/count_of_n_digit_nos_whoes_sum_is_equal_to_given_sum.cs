@@ -16,7 +16,7 @@ namespace Test.Arrays_Stings
 
         void count_n_digit(int n,int sum)
         {
-            int end = (int)Math.Pow(10,n);
+            int end = (int)Math.Pow(10,n)-1;
             int start = (int)Math.Pow(10, n - 1);
             int count = 0;
             for(int i=start;i<end;i++)

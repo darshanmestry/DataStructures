@@ -64,6 +64,22 @@ namespace Test.Arrays_Stings
 
         }
 
+        /**
+    * Fast DP solution. Tushar roy
+    */
+        public int maxSumSol(int[] arr)
+        {
+            int excl = 0;
+            int incl = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                int temp = incl;
+                incl = Math.Max(excl + arr[i], incl);
+                excl = temp;
+            }
+            return incl;
+        }
+
         void max_sumPractise(int[] arr)
         {
             if (arr.Length == 1)

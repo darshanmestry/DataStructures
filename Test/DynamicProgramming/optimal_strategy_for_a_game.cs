@@ -99,7 +99,7 @@ namespace Test.DynamicProgramming
 
                     
                     int Player1_PickFirstFromLeftSide = arr[row] + dp[row+1, j ].second; //e.g {3 9 1} it means p1 picks 3 and second value between {9,1}  which is 1
-                    int Player1_PickFirstFromRightSide = arr[col] + dp[row, j - 1].second; //e.g {3 9 1} it means p1 picks 1 and second value between {3,9}  which is 3
+                    int Player1_PickFirstFromRightSide = arr[j] + dp[row, j - 1].second; //e.g {3 9 1} it means p1 picks 1 and second value between {3,9}  which is 3
 
 
                     int Player2_PickSecondFromLeftSide = dp[row + 1, j].first; //e.g {3 9 1} it means p1 picks 3 and then p2 will pick 9
@@ -111,17 +111,39 @@ namespace Test.DynamicProgramming
                         dp[row, j].first = Player1_PickFirstFromLeftSide;
                         //Whatever Player 1 will pick for that, Player 2 will pick 1st of the next element
                         //e.g. 3 9 1 if player1 picks 3 then Player 2 will pick 9 as we are going from left 
+
+                        //If player 1 has picked from left side then, We (Player2_PickSecondFromLeftSide) variable gives whatever best player 2 can get when player 1 has picked from left side
                         dp[row, j].second = Player2_PickSecondFromLeftSide;
+                        
                     }
                     else
                     {
                         dp[row, j].first = Player1_PickFirstFromRightSide;
                         //Whatever Player 1 will pick for that, Player 2 will pick 1st of the next element
                         //e.g. 3 9 1 if player1 picks 1 then Player 2 will pick 9 as we are going from right 
+
+                        //If player 1 has picked from right side then, We (Player2_PickSecondFromRightSide) variable gives whatever best player 2 can get when player 1 has picked from right side
                         dp[row, j].second = Player2_PickSecondFromRightSide;
+
+                       
                     }
 
                 }
+            }
+
+            print(dp);
+            Console.Write(dp[0, len - 1].first + "," + dp[0, len - 1].second);
+        }
+
+        void print(pick[,] dp)
+        {
+            for(int i=0;i<dp.GetLength(0);i++)
+            {
+                for(int j=0;j<dp.GetLength(1);j++)
+                {
+                    Console.Write("(" + dp[i, j].first + "," + dp[i, j].second + ") ,");
+                }
+                Console.WriteLine();
             }
         }
     }

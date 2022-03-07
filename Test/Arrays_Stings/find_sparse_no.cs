@@ -23,7 +23,7 @@ namespace Test.Arrays_Stings
     {
         public find_sparse_no()
         {
-            find_sparse(7);
+            find_sparse(6);
         }
 
         void find_sparse(int no)
@@ -47,7 +47,7 @@ namespace Test.Arrays_Stings
                         binary[j] = 0;
 
                     last_final = i + 1;
-                }
+                 }
             }
 
             int ans = 0;

@@ -95,6 +95,7 @@
     <Compile Include="Arrays_Stings\paper_cut_into_min_no_of_squares.cs" />
     <Compile Include="Arrays_Stings\print_max_no_of_A_using_crtlA_crtlV_crtlC.cs" />
     <Compile Include="Arrays_Stings\remove_minimun_elements_from_either_side_such_that_2_x_min_becomes_max.cs" />
+    <Compile Include="Arrays_Stings\sliding_window_maximum.cs" />
     <Compile Include="Arrays_Stings\smallest_window_that_contains_all_chars_of_string_itself.cs" />
     <Compile Include="Arrays_Stings\snake_and_ladder_problem.cs" />
     <Compile Include="Arrays_Stings\sort_an_array_according_to_order_defined_in_another_array.cs" />

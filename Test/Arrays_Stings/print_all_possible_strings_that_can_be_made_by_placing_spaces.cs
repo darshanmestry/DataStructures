@@ -19,8 +19,8 @@ namespace Test.Arrays_Stings
     {
         public print_all_possible_strings_that_can_be_made_by_placing_spaces()
         {
-            print("2101");
-            //print_2nd_time_practise("ABC");
+            //print("2101");
+            print_2nd_time_practise("ABC");
         }
 
         void print(string str)
@@ -67,7 +67,8 @@ namespace Test.Arrays_Stings
             {
                 for(int j=0;j<str.Length;j++)
                 {
-                    Console.WriteLine(str[i]);
+                    int tmp = 1 << j;
+                    Console.Write(str[j]);
                     if((i &(1<<j))>0)
                     {
                         Console.Write(" ");

@@ -74,6 +74,7 @@ namespace Test.DynamicProgramming
                     // E.g. if cell[3,3] then check value of [2,3] If it is true or go arr[i] cols back in [2,3] in this case col=3,arr[i]=3 then j-arr[i]=0
                     if(j-arr[i-1]>=0)
                     {
+                        // First is check if i(th) element is excluded (dp[i - 1, j]) || Seconch check is if i(th) element is included. ( dp[i - 1, j - arr[i-1]] )
                         dp[i, j] = dp[i - 1, j] || dp[i - 1, j - arr[i-1]];
                     }
                     else

@@ -43,8 +43,9 @@ namespace Test.Arrays_Stings
             int a=0, b=0;
             for(int i=0;i<arr.Length;i++)
             {
-                int condition = (arr[i] & right_most_set_bit_of_xor);
-                if (condition==right_most_set_bit_of_xor)
+               // int condition = (arr[i] & right_most_set_bit_of_xor);
+               // if (condition==right_most_set_bit_of_xor)
+               if((arr[i] & right_most_set_bit_of_xor)>0)
                     a ^= arr[i];
                 else
                     b ^= arr[i]

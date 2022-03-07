@@ -41,9 +41,14 @@ namespace Test.LinkedList
 
                 if (cur.data < prev.data)
                 {
+                    // Detach curr from linked list
                     prev.next = cur.next;
+
+                    // Move current node to beginning
                     cur.next = head;
                     head = cur;
+
+                    // Update current
                     cur = prev;
 
                 }

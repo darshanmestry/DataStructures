@@ -27,6 +27,15 @@ namespace Test.Arrays_Stings
             lis.Add(new interval(4, 7));
 
             mergrOverlap(lis);
+            //{{1,3}, {2,4}, {5,7}, {6,8}}
+            //The intervals {1,3} and {2,4} overlap with each other, so they should be merged and become {1, 4}. Similarly, {5, 7} and {6, 8} should be merged and become {5, 8}
+            List<interval> lis1 = new List<interval>();
+            lis1.Add(new interval(1, 3));
+            lis1.Add(new interval(2, 4));
+            lis1.Add(new interval(5, 7));
+            lis1.Add(new interval(6, 8));
+
+            mergrOverlap(lis1);
         }
 
         void mergrOverlap(List<interval> lis)
@@ -51,6 +60,9 @@ namespace Test.Arrays_Stings
                 else
                 {
                     index++;
+
+                    lis[index].start = lis[i].start;
+                    lis[index].end =  lis[i].end;
                 }
             }
 

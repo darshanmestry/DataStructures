@@ -30,7 +30,7 @@ namespace Test.Arrays_Stings
                     rightsum += arr[rightindex - i];
 
                     if (leftsum == rightsum)
-                        return (leftindex + i + 1);
+                        Console.WriteLine(leftindex + i + 1);
 
                 }
             }

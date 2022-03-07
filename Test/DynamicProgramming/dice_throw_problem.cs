@@ -48,13 +48,16 @@ namespace Test.DynamicProgramming
             {
                 for(int j=1;j<=sum;j++)
                 {
-                    for(int k=1;k<=no_of_faces && k<j;k++)
+                    Console.Write("table[" + i + "," + j + "] = ");
+                    for (int k=1;k<=no_of_faces && k<j;k++)
                     {
+                        Console.Write("table[" + (i-1) + "," + (j-k) + "], ");
                         table[i, j] += table[i - 1, j - k];
                     }
+                    Console.WriteLine();
                 }
             }
-
+            Console.WriteLine();
 
             for (int i = 0; i <= no_of_dice; i++)
             {

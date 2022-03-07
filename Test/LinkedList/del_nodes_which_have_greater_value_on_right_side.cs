@@ -52,20 +52,24 @@ namespace Test.LinkedList
          
 
             int maxTilNow = temp.data;
-            while (temp!=null)
+            while (temp != null && temp.next != null)
             {
-                if(temp.next.data<maxTilNow)
+                if (temp.next.data < maxTilNow)
                 {
                     //Node delnode = temp.next;
                     temp.next = temp.next.next;
 
-                    if(temp.next!=null)
+                  
+                    if (temp.next != null)
                         maxTilNow = temp.next.data;
+
+                }
+                else
+                {
+                    temp = temp.next;
+                    maxTilNow = temp.data;
                     
                 }
-                
-
-                temp = temp.next;
             }
 
             head = reverse(cur);

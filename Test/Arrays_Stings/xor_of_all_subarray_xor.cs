@@ -24,7 +24,8 @@ namespace Test.Arrays_Stings
                 (3^5^2^4) ^ (5^2^4^6) ^
                 (3^5^2^4^6) = 7     
 
-            An efficient solution is based on the idea to enumerate all subarrays, we can count frequency of each element occurred totally in all subarrays, if the frequency of an element is odd then it will be included in final result otherwise not.
+            An efficient solution is based on the idea to enumerate all subarrays, we can count frequency of each element occurred totally in all subarrays, 
+            if the frequency of an element is odd then it will be included in final result otherwise not.
 
             As in above example, 
             3 occurred 5 times,

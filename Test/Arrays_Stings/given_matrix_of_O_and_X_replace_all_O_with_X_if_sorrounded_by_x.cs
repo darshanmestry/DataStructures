@@ -13,12 +13,7 @@ namespace Test.Arrays_Stings
             Examples: 
  
 
-            Input: mat[M][N] =  {{'X', 'O', 'X', 'X', 'X', 'X'},
-                                 {'X', 'O', 'X', 'X', 'O', 'X'},
-                                 {'X', 'X', 'X', 'O', 'O', 'X'},
-                                 {'O', 'X', 'X', 'X', 'X', 'X'},
-                                 {'X', 'X', 'X', 'O', 'X', 'O'},
-                                 {'O', 'O', 'X', 'O', 'O', 'O'},
+
                                 };
             Output: mat[M][N] =  {{'X', 'O', 'X', 'X', 'X', 'X'},
                                   {'X', 'O', 'X', 'X', 'X', 'X'},
@@ -30,7 +25,7 @@ namespace Test.Arrays_Stings
          */
         public given_matrix_of_O_and_X_replace_all_O_with_X_if_sorrounded_by_x()
         {
-            char[,] arr={{'X', 'O', 'X', 'X', 'X', 'X'},
+            char[,]  arr={{'X', 'O', 'X', 'X', 'X', 'X'},
                                  {'X', 'O', 'X', 'X', 'O', 'X'},
                                  {'X', 'X', 'X', 'O', 'O', 'X'},
                                  {'O', 'X', 'X', 'X', 'X', 'X'},
@@ -45,12 +40,21 @@ namespace Test.Arrays_Stings
         {
             replace_All_char_with_matching_char(arr, 'O', '-');
 
+
+            print(arr);
+            Console.WriteLine();
+            Console.WriteLine();
             replace_all_edgesEdges(arr, '-', 'O');
 
+
+            print(arr);
+            Console.WriteLine();
+            Console.WriteLine();
             replace_All_char_with_matching_char(arr, '-', 'X');
 
 
             print(arr);
+
         }
 
         void replace_All_char_with_matching_char(char[,] arr,char charToReplace,char replacingChar)
@@ -78,15 +82,15 @@ namespace Test.Arrays_Stings
                     //it top cell is having o then its next value in same col will also cannot be replaced.
                     //Sane logic applies for bottom,left,right sides
 
-                    int j=1;
+                    int ROW=1;
                     //keep replacing - with O in the same column below ,same logic applies for all
-                    while (arr[j, i] == charToReplace)
+                    while (arr[ROW, i] == charToReplace)
                     {
-                        if (arr[j, i] == charToReplace)
-                            arr[j, i] = replacingChar;
+                        if (arr[ROW, i] == charToReplace)
+                            arr[ROW, i] = replacingChar;
                         else
                             break;
-                        j++;
+                        ROW++;
                     }
                 }
             }
@@ -98,8 +102,8 @@ namespace Test.Arrays_Stings
                 {
                     arr[rowLen - 1, i] = replacingChar;
 
-                    int j = rowLen - 2;
-                    while (arr[j, i] == charToReplace)
+                    int ROW = rowLen - 2;
+                    while (arr[ROW, i] == charToReplace)
                     {
 
                         if (arr[rowLen - 2, i] == charToReplace)
@@ -107,7 +111,7 @@ namespace Test.Arrays_Stings
                         else
                             break;
 
-                        j--;
+                        ROW--;
                     }
                 }
             }

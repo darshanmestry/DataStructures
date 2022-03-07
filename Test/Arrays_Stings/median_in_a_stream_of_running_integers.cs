@@ -12,7 +12,9 @@ namespace Test.Arrays_Stings
         public median_in_a_stream_of_running_integers()
         {
             int[] arr= { 5, 15, 1, 3, 2, 8, 7, 9, 10, 6, 11, 4 };
-            start(arr);
+
+            int[] arr1 = { 3,4,5,1 };
+            start(arr1);
         }
         /*
          For the first two elements add smaller one to the maxHeap on the left, and bigger one to the minHeap on the right. Then process stream data one by one,

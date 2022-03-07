@@ -53,7 +53,7 @@ namespace Test.Tree
 
             ans = Math.Max(root.data - minVal, ans);
 
-            return ans;
+            return minVal;
         }
     }
 }

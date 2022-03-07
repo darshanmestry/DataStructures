@@ -22,7 +22,7 @@ namespace Test.Arrays_Stings
              */
 
             int[] arr = { 1, 2, 2 };
-
+            subsets_Easy_solution(arr);
             subsets(arr);
         }
 
@@ -54,6 +54,33 @@ namespace Test.Arrays_Stings
         }
     
     
+
+        void subsets_Easy_solution(int [] arr)
+        {
+            int pow = (int)Math.Pow(2, arr.Length);
+
+            List<string> lis = new List<string>();
+
+            for(int i=0;i<pow;i++)
+            {
+                string temp = "";
+
+                // consider each element in the set
+                for (int j=0;j<arr.Length;j++)
+                {
+
+                    // Check if jth bit in the i is set. If the bit
+                    // is set, we consider jth element from set
+                    if ((i&(1<<j))!=0)
+                    {
+                        temp += arr[j].ToString();
+                    }
+
+                    if (!lis.Contains(temp))
+                        lis.Add(temp);
+                }
+            }
+        }
         void pract(int[] arr)
         {
             int pow =(int) Math.Pow(2, arr.Length);

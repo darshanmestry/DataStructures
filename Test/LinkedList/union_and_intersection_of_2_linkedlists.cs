@@ -18,7 +18,7 @@ namespace Test.LinkedList
 
 
 
-        For both Use Hashing.
+        For both Use Hashing. Store both List in HashMap
     
          */
 

@@ -76,8 +76,6 @@ namespace Test.Tree
             util(root.right,distFromRoot+1);
             
 
-
-
         }
 
        
